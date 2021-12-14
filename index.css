@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Patrick+Hand&family=Permanent+Marker&display=swap");
 body {
-  background: grey;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background: #161515;
+  cursor: none;
+  font-family: "Patrick Hand", cursive;
+  color: #c5c5c5;
 }
 
 .mouse {
@@ -8,8 +16,24 @@ body {
   height: 50px;
   width: 50px;
   border-radius: 50%;
+  background: transparent;
+  transform: translate(-50%, -50%);
+  border: solid 2px green;
+  transition: 0.2s;
+}
+
+.smallMouse {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
   background: green;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
+}
+
+img {
+  height: 30vh;
+  width: auto;
 }
 
 /*# sourceMappingURL=index.css.map */
