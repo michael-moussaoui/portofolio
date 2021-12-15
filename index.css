@@ -6,7 +6,6 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
   background: #161515;
-  cursor: none;
   font-family: "Patrick Hand", cursive;
   color: #c5c5c5;
 }
@@ -24,16 +23,34 @@ body {
 
 .smallMouse {
   position: absolute;
-  height: 15px;
-  width: 15px;
+  height: 13px;
+  width: 13px;
   border-radius: 50%;
   background: green;
   transform: translate(-50%, -50%);
+  transition: 0.2s ease;
+  z-index: -1;
 }
 
 img {
   height: 30vh;
   width: auto;
+}
+
+.fab {
+  font-size: 5vh;
+}
+.fab.fa-facebook-square {
+  color: blue;
+}
+.fab.fa-github-square {
+  color: white;
+}
+.fab.fa-twitter-square {
+  color: #4444e6;
+}
+.fab.fa-linkedin {
+  color: #02025a;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -15,7 +15,7 @@ body{
     box-sizing: border-box;
     overflow-x: hidden;
     background: rgb(22, 21, 21);
-    cursor:none;
+    // cursor:none;
     font-family: $font3;
     color: $firstColor;
 }
@@ -33,18 +33,37 @@ body{
 }
 .smallMouse{
     position: absolute;
-    height: 15px;
-    width: 15px;
+    height: 13px;
+    width: 13px;
     border-radius: 50%;
     background: green;
     transform: translate(-50%, -50%);
+    transition: .2s ease;
+    z-index: -1;
     
 }
 img{
     height: 30vh;
-    width: auto;
-    
+    width: auto;  
 
+}
+
+.fab{
+    font-size: 5vh;
+    &.fa-facebook-square{
+        color: blue;
+    }
+    &.fa-github-square{
+        color: white;
+    }
+    &.fa-twitter-square{
+        color: rgb(68, 68, 230);
+    }
+    &.fa-linkedin{
+        color:rgb(2, 2, 90)
+    }
+    
+    
 }
 
 
