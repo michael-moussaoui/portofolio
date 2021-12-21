@@ -9,43 +9,194 @@ $font4 : 'Permanent Marker', cursive;
 $firstColor :rgb(197, 197, 197);
 $secondColor :rgb(0, 0, 0);
 
-body{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
     overflow-x: hidden;
-    background: rgb(22, 21, 21);
-    // cursor:none;
+    background: #EDF0ED;
+    // background-image: url(./img/pexels-anni-roenkae-2156881.jpg);
+    background-size: cover;
+    background-position: center;
     font-family: $font3;
     color: $firstColor;
+    
+
+    
+
+    &.background{
+        transition: ease-in-out .3s ;
+        animation: changeBackgroundColor 1.5s both ;
+    }
+    @keyframes changeBackgroundColor  {
+        0%{
+            // transform: translateX(0);
+            background: #EDF0ED;
+        }
+        100%{
+            // transform: translateX(100%);
+            background: #989c98;
+        }         
+    }
 }
 
 .mouse{
     position: absolute;
-    height: 50px;
-    width: 50px;
+    height: 35px;
+    width: 35px;
     border-radius: 50%;
-    background: transparent;
-    transform: translate(-50%, -50%);
-    border: solid 2px green;
-    transition: .2s;
-    
-}
-.smallMouse{
-    position: absolute;
-    height: 13px;
-    width: 13px;
-    border-radius: 50%;
-    background: green;
+    border: rgb(43, 40, 40) solid 2px;
     transform: translate(-50%, -50%);
     transition: .2s ease;
     z-index: -1;
     
 }
-img{
-    height: 30vh;
-    width: auto;  
 
+/*******NAVIGATION*********/ 
+
+.navbar{ 
+    position: absolute;
+    height: 10vh;  
+    width: 100vw;
+    background: grey;
+    background: transparent;
+  
+
+    ul{
+        
+        align-items: center;
+        color: hotpink ;
+        
+    }
+
+        li{
+            color: chartreuse ;
+            list-style: none;
+            font-size: 1.8rem;
+            margin: 2%;
+
+        &:hover{
+            font-size: 2.3rem;
+            transition: .3s;    
+        }
+   }
+    .nav-link{
+        color: rgba(73, 41, 20, 0.897) !important;
+
+        &:hover{
+            color: rgb(60, 110, 202) !important;
+            font-size: 5rem;
+            animation: text-pop-up-top 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+        &.out{
+            animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both ;
+        }
+        @keyframes text-pop-up-top {
+            0% {
+              transform: translateY(0);
+              transform-origin: 50% 50%;
+              text-shadow: none;
+            }
+            100% {
+             transform: translateY(-50px);
+             transform-origin: 50% 50%;
+             text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+            }
+          }
+
+        @keyframes text-pop-up-bottom {
+            0% {
+                transform: translateY(-50px);
+                transform-origin: 50% 50%;
+                text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+            }
+            100% {
+                transform: translateY(0);
+                transform-origin: 50% 50%;
+                text-shadow: none;
+            }
+            
+        }  
+    }
+}
+
+.navbar-brand{
+    position: relative;
+    left: 5vw;
+    font-size: 1.8rem;
+    
+}
+.navbar-toggler{
+    height: 21vh ;
+    border: none;
+    z-index: 500;
+
+    
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.togglerMenu{
+    position:relative ;
+    top:-13vh;
+    visibility: visible;
+    cursor: pointer;
+
+    &.active{
+        visibility: hidden;
+    }
+}
+
+.navbar-toggler-icon {
+    background-image: url("./img/logoWhite.png") !important;
+    height: 20vh;
+    width: 15vw;
+    border: transparent !important;
+    visibility: hidden;
+
+    &.active{
+        visibility: visible;
+    }
+}
+/************* MAIN SECTION *************/ 
+.main{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+
+    & h1{
+        position: relative;
+        font-size: 4.5rem;
+
+    }
+}
+
+
+.title{
+    height: 100vh;
+    width: 100%;
+    font-size: 3.5rem;
+    display: flex;
+    justify-content: center;
+    
+
+    // & p {
+    //     display: flex;
+    //     font-size: 1.8rem;
+    //     margin-top: 25vh;
+    // }
 }
 
 .fab{
@@ -62,8 +213,7 @@ img{
     &.fa-linkedin{
         color:rgb(2, 2, 90)
     }
-    
-    
+       
 }
 
 
