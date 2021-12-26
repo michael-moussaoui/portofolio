@@ -13,34 +13,31 @@ $secondColor :rgb(0, 0, 0);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body{
     overflow-x: hidden;
-    background: #EDF0ED;
-    // background-image: url(./img/pexels-anni-roenkae-2156881.jpg);
-    background-size: cover;
-    background-position: center;
+    // background: #EDF0ED;
+    background: #000;
     font-family: $font3;
     color: $firstColor;
-    
-
     
 
     &.background{
         transition: ease-in-out .3s ;
         animation: changeBackgroundColor 1.5s both ;
     }
-    @keyframes changeBackgroundColor  {
-        0%{
-            // transform: translateX(0);
-            background: #EDF0ED;
-        }
-        100%{
-            // transform: translateX(100%);
-            background: #989c98;
-        }         
-    }
+    // @keyframes changeBackgroundColor  {
+    //     0%{
+    //         // transform: translateX(0);
+    //         background: #EDF0ED;
+    //     }
+    //     100%{
+    //         // transform: translateX(100%);
+    //         background: #989c98;
+    //     }         
+    // }
 }
 
 .mouse{
@@ -48,11 +45,15 @@ body{
     height: 35px;
     width: 35px;
     border-radius: 50%;
-    border: rgb(43, 40, 40) solid 2px;
+    border: #3f2b1f;
     transform: translate(-50%, -50%);
     transition: .2s ease;
     z-index: -1;
     
+}
+
+header{
+    height: 20vh;
 }
 
 /*******NAVIGATION*********/ 
@@ -61,65 +62,120 @@ body{
     position: absolute;
     height: 10vh;  
     width: 100vw;
-    background: grey;
     background: transparent;
-  
-
-    ul{
-        
+    
+   
+    .navbar-nav-top{
+        position: relative;
+        display: flex;
+        position: fixed;
         align-items: center;
-        color: hotpink ;
+        font-size: 1.9rem;
+        width: 100vw;
+        height: 13vh;
+        left: -1vw;
+        border-bottom: 1px solid #925c3b;
+        list-style: none !important;
+        justify-content: center;
+        // top: -100px;
+        background: #925c3b2a;
+        transition: .3s;
+        margin: 0;
+        z-index: 600;
+
+        // &:hover{
+        //     height: 15vh;
+        // }
+        
+        
+        .logo{
+            position: relative;
+            left: -15vw;
+            height: 100px;
+        }
+        
+
+        .nav-item-top{
+            // background: #000;
+            
+
+            .nav-link-top{
+                position: relative;
+                color: #925c3b !important;
+                text-decoration: none !important;
+                margin: 20px;
+                
+                
+
+                &:hover{
+                    color: #3f2b1f !important;
+                    transition: .5s;
+                }
+            }
+        }
+    }
+
+    .navbar-nav{
+        position: relative;
+        align-items: center;
+        top: -5vh;
+        
         
     }
 
-        li{
-            color: chartreuse ;
-            list-style: none;
-            font-size: 1.8rem;
-            margin: 2%;
+//         li{
+//             color: chartreuse ;
+//             list-style: none;
+//             font-size: 1.8rem;
+//             margin: 2%;
 
-        &:hover{
-            font-size: 2.3rem;
-            transition: .3s;    
-        }
-   }
+//         // &:hover{
+//         //     font-size: 2.3rem;
+//         //     transition: .3s;    
+//         // }
+//    }
     .nav-link{
-        color: rgba(73, 41, 20, 0.897) !important;
-
+        
+        color:#925c3b !important;
+        font-size: 3.5rem;
+        transition: .8s;
+        
+        
         &:hover{
-            color: rgb(60, 110, 202) !important;
+            color: #925c3b !important;
             font-size: 5rem;
-            animation: text-pop-up-top 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: text-pop-up-top 1.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            
+        }
+        &.active{
+            animation: textEntrance .5s ease 1.5s;
+            
         }
         &.out{
             animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both ;
         }
+
+
         @keyframes text-pop-up-top {
             0% {
-              transform: translateY(0);
-              transform-origin: 50% 50%;
+            
               text-shadow: none;
             }
             100% {
-             transform: translateY(-50px);
-             transform-origin: 50% 50%;
-             text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+            
+             text-shadow: 0 1px 0 #3f2b1f, 0 2px 0 #3f2b1f, 0 3px 0 #3f2b1f, 0 4px 0 #3f2b1f, 0 5px 0 #3f2b1f, 0 6px 0 #3f2b1f, 0 7px 0 #3f2b1f, 0 8px 0 #3f2b1f, 0 9px 0 #3f2b1f, 0 50px 30px rgb(36, 33, 32);
             }
           }
 
-        @keyframes text-pop-up-bottom {
-            0% {
-                transform: translateY(-50px);
-                transform-origin: 50% 50%;
-                text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+        
+        @keyframes textEntrance {
+            0%{
+                opacity: 0;
             }
-            100% {
-                transform: translateY(0);
-                transform-origin: 50% 50%;
-                text-shadow: none;
-            }
-            
-        }  
+            100%{
+                opacity: 1;
+            }  
+        } 
     }
 }
 
@@ -129,8 +185,20 @@ body{
     font-size: 1.8rem;
     
 }
+
+.nav-item{
+    z-index: 500;
+    transition: 1.5s;
+    padding: 0;
+    margin: 10px;
+    
+    
+}
 .navbar-toggler{
-    height: 21vh ;
+    position: relative;
+    right: 10vw;
+    height: 10vh ;
+    width: 5vw;
     border: none;
     z-index: 500;
 
@@ -144,20 +212,68 @@ body{
 }
 
 .togglerMenu{
-    position:relative ;
-    top:-13vh;
+    position:absolute;
+    top:3vh;
+    right: -1vw;
     visibility: visible;
     cursor: pointer;
+    color:#925c3b;
+    width: 70px;
+    height: 70px;
+    
 
+    
+
+    // &.active{
+    //     visibility: hidden;
+    // }
     &.active{
+        animation: growUp 2.8s ease alternate backwards ;
+        transition: .5s;
         visibility: hidden;
+       
+    }
+    
+
+    &:hover{
+        background: #925c3b2a;
+        border-radius: 50%;
+        border: #925c3b solid 1.5px;
+
+    }
+    @keyframes growUp {
+        0%{
+            background: #925c3b;
+            transform: scale(0);
+            visibility: visible;
+
+        }
+        50%{
+            background: #925c3b;
+            transform: scale(50);
+            visibility: visible;
+            opacity: 0.5;
+            
+        }
+        100%{
+            background: #925c3b2a;
+            transform: scale(0);
+            border: none;
+            color: #925c3b2a;
+            opacity: 0;
+        }
+        
     }
 }
 
 .navbar-toggler-icon {
-    background-image: url("./img/logoWhite.png") !important;
-    height: 20vh;
-    width: 15vw;
+    position: absolute;
+    right: -1vw;
+    // background-image: url("./img/logoWhite.png") !important;
+    // height: 25vh;
+    // width: 18vw;
+    font-size: 50px;
+    color: #925c3b;
     border: transparent !important;
     visibility: hidden;
 
@@ -176,20 +292,71 @@ body{
     
     
 
-    & h1{
-        position: relative;
+    & .myName{
+        position: absolute;
+        top:8vh;
         font-size: 4.5rem;
+        color: #925c3b;
+        font-family: $font4;
+        border-top: #925c3b solid 3px;
+        border-right:#925c3b solid 3px ;
+        padding: 50px;
+
+        &.active{
+            visibility: hidden;
+        }
+
+    }
+    & .presentation{
+        position: absolute;
+        top:37vh;
+        font-size: 4rem;
+        color: #925c3b;
+        // border-radius: 10px;
+        padding: 10px;
+        // background: #925c3b2a;
+        border-bottom: #925c3b solid 3px;
+        border-left:#925c3b solid 3px ;
+        padding: 50px;
+
+        &.active{
+            visibility: hidden;
+
+        }
+        
 
     }
 }
 
 
+.arowUp{
+    position: absolute;
+    position: fixed;
+    right: 3vw;
+    bottom: 5vh;
+    font-size: 60px !important ;
+    color:#925c3b;
+    z-index: 1500;
+
+    & :hover{
+        color: #3f2b1f;
+        transition: .3s;
+        background: #925c3b2a;
+        border-radius: 50%;
+    }
+}
+
+
 .title{
+    
     height: 100vh;
     width: 100%;
-    font-size: 3.5rem;
-    display: flex;
-    justify-content: center;
+    font-size: 4.5rem;
+    // display:block;
+    text-align: center;
+    font-family: $font4;
+    color: #925c3b;
+    
     
 
     // & p {
@@ -198,7 +365,128 @@ body{
     //     margin-top: 25vh;
     // }
 }
+/*********** SECTION ABOUT **********/
+#about{
+    position: relative;
+    
+}
+.titleOne,
+.titleTwo,
+.titleThree,
+.titleFour,
+.titleFive{
+    position: relative;
+    top:15vh;
+    
+} 
 
+.aboutMe{
+    position: relative;
+    font-size: 1.5rem;
+    margin-top: 25vh;
+    width: 60vw;
+} 
+.mike{
+    position: absolute;
+    top:-5vh;
+    left: 65vw;
+    opacity: 0.3;
+    width: 25vw;
+    height: 50vh;
+    border-radius: 35px;
+}
+
+
+/*************** SECTION SKILLS ******************************/ 
+
+#skills{
+    position: relative;
+}
+.leftProgress,
+.rightProgress{
+    position: absolute;
+    display: inline-block;
+    width: 40vw;
+    top: 40vh;
+
+}
+
+.leftProgress{
+    left: 5vw;
+}
+.rightProgress{
+    right: 5vw;
+    
+}
+
+.progress{
+    position: relative;
+    left: 5vw;
+    width: 30vw;
+    height: 3vh;
+    margin: -15px;
+    background-color: #925c3b2a;
+
+}
+.first{
+    margin-top: 50px;
+}
+.progress-bar{
+    background: #925c3b;   
+    
+}
+
+.techno{
+    position: absolute;
+    left:75%;
+    color: #3f2b1f;   
+}
+
+.techno1{
+    position: absolute;
+    color:aqua;
+    left:2vw;
+    
+    
+}
+
+/************* SECTION CONTACT **************************/ 
+input,
+textarea{
+    background: #925c3b2a !important;
+    outline: none !important;
+    box-shadow: none !important;
+    
+}
+form{
+    position: relative;
+    left:10%;
+}
+
+.mb-3,
+textarea{
+    width: 80vw !important;
+    color: #925c3b !important;
+}
+// .form-label:focus,
+// .form-label:active,
+// .form-control:focus,
+// .form-control:active{
+//     outline: none !important ;
+//     box-shadow: none !important ;
+// }
+.btn{
+    background: #925c3b2a;
+    color: #925c3b;
+    &:hover{
+        background: #925c3b;
+        color: #3f2b1f;
+        transition: .3s;
+    }
+}
+
+
+/************** FOOTER ***********/ 
 .fab{
     font-size: 5vh;
     &.fa-facebook-square{
