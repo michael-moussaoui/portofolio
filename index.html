@@ -12,13 +12,16 @@
     
 </head>
 <body>
+  <div id="top"></div>
     <header>
-        <nav class="navbar navbar-light">
+        <nav class="navbar navbar-light" role="navigation" aria-label="main menu">
             <div class="container-fluid">
               <a class="navbar-brand" href="./index.html"></a>
               <ul class="navbar-nav-top">
-                <img class="logo" src="./img/Michael_logo1.png" alt="">
                 
+                <li class="nav-item-top">
+                  <a class="nav-link-top " href="#top"><img class="logo" src="./img/Michael_logo1.png" alt="logo du développeur"></a>
+                </li>
                 <li class="nav-item-top">
                   <a class="nav-link-top" href="#about">A propos</a>
                 </li>
@@ -36,10 +39,14 @@
                 </li>
               </ul>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+               
                 <span class="navbar-toggler-icon"><i class="fas fa-times"></i></span>
                 <div class="togglerMenu"><br>Menu</div>
               </button> 
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                 <!-- <div class="logo-navbar-nav"> -->
+                  <img class="image" src="./img/Michael_logo1.png"  alt="">
+                <!-- </div> -->
                   <ul class="navbar-nav">
                     <li class="nav-item">
                       <a class="nav-link" href="#about">A propos</a>
@@ -57,42 +64,24 @@
                       <a class="nav-link" href="#contact">Contact</a>
                     </li>
                   </ul>
-                </div>
+              </div>
             </div>
           </nav>
 
-    <!-- <div class="logoContenair">
-        <a href="./index.html">
-          <img class="logo" src="./img/logoWhite.png" alt="Logo du développeur">
-        </a>
-    </div> -->
 </header>
-<!-- <nav class="navbar" role="navigation" aria-label="main menu">
-<ul>
-    <a href=""><li>A propos</li></a>
-    <a href=""><li>Fomation</li></a>
-    <a href=""><li>Mes compétences</li></a>
-    <a href=""><li>Mon portofolio</li></a>
-    <a href=""><li>Contact</li></a>
-</ul>
-</nav> -->
-  <div class="mouse" ></div>
+
+  <div id="mouse" ></div>
   
-    <a class="arowUp" href="./index.html"><i class="far fa-arrow-alt-circle-up"></i></a>
+    <a class="arowUp" href="#top"><i class="far fa-arrow-alt-circle-up"></i></a>
   
   <section class="section main">
     <p class="myName" data-speed= "4">MOUSSAOUI Michael</p>
     <p class="presentation" data-speed="4">développeur Web fullstack</p>
  
-    
-    <!-- <h2>développeur web</h2>
-    <img class="mike" src="./img/mikeCartoon.jpg" alt="photo de profil en cartoon"> -->
-    
-    
+   
   </section>
     <section class=" section title one" id="about">
       <div class="titleOne">A propos</div>
-      <!-- <p>Bonjour je m'appelle Michaël MOUSSAOUI, j'ai 42 ans, après plus de 20 ans dans le metier de la sécurité,j'ai choisi de m'orienter vers l'informatique </p> -->
       <div class="aboutMe">
         <p>Intéressé par l'informatique depuis toujours, je suis en reconversion professionnelle.
           Déjà capable d'utiliser les technologies comme HTML5 et CSS3, je poursuis actuellement mon apprentissage (en ce moment JAVASCRIPT).
@@ -143,6 +132,29 @@
 
     <section class=" section title" id="portofolio">
       <div class="titleFour">Mon portofolio</div>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <img class="siteOne" src="./img/site1.png" alt="">
+            <a class="visit v1" href="https://lankeycode.github.io/evaluation1/">visite du site</a>
+          </div>
+          <div class="col">
+            <img class='siteTwo' src="./img/site2.png" alt="">
+            <a class="visit v2" href="https://lankeycode.github.io/project2/">visite du site</a>
+          </div>
+        </div>
+
+      <!-- <div class="titleFour">Mon portofolio</div>
+      <div class="site1">
+        <img class="siteOne" src="./img/site1.png" alt="">
+      </div>
+      <div class="site2">
+        <img class='siteTwo' src="./img/site2.png" alt="">
+      </div> -->
+      <!-- https://lankeycode.github.io/evaluation1/ -->
+      <!-- https://lankeycode.github.io/project2/ -->
+      
+
     </section>
 
     <section class="section title" id="contact">
@@ -150,20 +162,20 @@
       <form>
         <div class="mb-3">
           <label for="formGroupExampleInput" class="form-label"></label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nom/Prénom">
+          <input type="text" class="form-control inputOne" id="formGroupExampleInput" pattern="[a-zA-Z]" placeholder="Nom/Prénom">
         </div>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label"></label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+          <input type="email" class="form-control inputTwo" id="exampleInputEmail1" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" aria-describedby="emailHelp" placeholder="Email">
           <div id="emailHelp" class="form-text"></div>
         </div>
         <div class="mb-3">
           <label for="formGroupExampleInput" class="form-label"></label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Objet">
+          <input type="text" class="form-control inputThree" id="formGroupExampleInput" placeholder="Objet">
         </div>
-        <div class="form-floating">
-          <textarea class="form-control" placeholder="Votre demande" id="floatingTextarea2" style="height: 100px"></textarea>
-          <label for="floatingTextarea2"></label>
+        <div class="form-mb-3">
+          <textarea class="form-control form-textarea" placeholder="Votre demande" id="Textarea2" style="height: 100px"></textarea>
+          <label for="Textarea2"></label>
         </div>
        
         <button type="submit" class="btn ">Envoyer</button>
@@ -173,10 +185,11 @@
     <footer role="contentinfo">
         <div class="social">
             <a href=""><i class="fab fa-facebook-square"></i></a>
-            <a href=""><i class="fab fa-github-square"></i></a>
-            <a href=""><i class="fab fa-twitter-square"></i></a>
-            <a href=""><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/lankeycode"><i class="fab fa-github-square"></i></a>
+            <a href="https://twitter.com/moussaoui_3813/photo"><i class="fab fa-twitter-square"></i></a>
+            <a href="https://linkedin.com/in/michael-moussaoui-251359216"><i class="fab fa-linkedin"></i></a>
         </div>
+        <p>Michael MOUSSAOUI - 2021 </p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

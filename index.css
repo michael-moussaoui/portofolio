@@ -18,15 +18,18 @@ body.background {
   animation: changeBackgroundColor 1.5s both;
 }
 
-.mouse {
+#mouse {
   position: absolute;
-  height: 35px;
-  width: 35px;
+  height: 45px;
+  width: 45px;
   border-radius: 50%;
-  border: #3f2b1f;
+  border: #3f2b1f solid 3px;
+  background: #3f2b1f;
   transform: translate(-50%, -50%);
   transition: 0.2s ease;
-  z-index: -1;
+  z-index: 1800;
+  pointer-events: none;
+  mix-blend-mode: difference;
 }
 
 header {
@@ -54,44 +57,82 @@ header {
   justify-content: center;
   background: #925c3b2a;
   transition: 0.3s;
-  margin: 0;
   z-index: 600;
+  visibility: hidden;
+}
+.navbar .navbar-nav-top.active {
+  visibility: visible;
 }
 .navbar .navbar-nav-top .logo {
-  position: relative;
-  left: -15vw;
-  height: 100px;
+  height: 140px;
 }
-.navbar .navbar-nav-top .nav-item-top .nav-link-top {
+.navbar .navbar-nav-top .item1 {
+  position: relative;
+  left: -10px;
+  margin-left: -150px;
+}
+.navbar .navbar-nav-top .nav-link-top {
   position: relative;
   color: #925c3b !important;
   text-decoration: none !important;
   margin: 20px;
 }
-.navbar .navbar-nav-top .nav-item-top .nav-link-top:hover {
+.navbar .navbar-nav-top .nav-link-top:hover {
   color: #3f2b1f !important;
   transition: 0.5s;
 }
-.navbar .navbar-nav {
+
+.navbar-nav {
   position: relative;
   align-items: center;
-  top: -5vh;
+  top: -3vh;
+  transition: 0.4s;
+  animation: slide-out-top 1.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  z-index: 100;
 }
-.navbar .nav-link {
+.navbar-nav.clicked {
+  animation: slide-in-top 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+.navbar-nav .nav-item {
+  transition: 1.5s;
+  padding: 0;
+  margin: 10px;
+}
+.navbar-nav .nav-item .nav-link {
+  position: relative;
   color: #925c3b !important;
   font-size: 3.5rem;
   transition: 0.8s;
+  z-index: 500;
+  text-decoration: none;
 }
-.navbar .nav-link:hover {
-  color: #925c3b !important;
+.navbar-nav .nav-item .nav-link:hover {
+  color: #925c3b2a !important;
   font-size: 5rem;
-  animation: text-pop-up-top 1.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  transform: scale(1.3);
 }
-.navbar .nav-link.active {
+.navbar-nav .nav-item .nav-link.active {
   animation: textEntrance 0.5s ease 1.5s;
 }
-.navbar .nav-link.out {
-  animation: text-pop-up-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+@keyframes slide-out-top {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-200px);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-400px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 @keyframes text-pop-up-top {
   0% {
@@ -116,20 +157,13 @@ header {
   font-size: 1.8rem;
 }
 
-.nav-item {
-  z-index: 500;
-  transition: 1.5s;
-  padding: 0;
-  margin: 10px;
-}
-
 .navbar-toggler {
   position: relative;
   right: 10vw;
   height: 10vh;
   width: 5vw;
   border: none;
-  z-index: 500;
+  z-index: 600;
 }
 
 .navbar-toggler:focus,
@@ -148,6 +182,7 @@ header {
   color: #925c3b;
   width: 70px;
   height: 70px;
+  z-index: 800;
 }
 .togglerMenu.active {
   animation: growUp 2.8s ease alternate backwards;
@@ -187,9 +222,28 @@ header {
   color: #925c3b;
   border: transparent !important;
   visibility: hidden;
+  z-index: 800;
 }
 .navbar-toggler-icon.active {
   visibility: visible;
+}
+.navbar-toggler-icon:hover {
+  animation: rotate-center 0.6s ease-in-out both;
+}
+@keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.image {
+  position: absolute;
+  top: -3vh;
+  height: 150px;
+  width: 150px;
 }
 
 /************* MAIN SECTION *************/
@@ -200,6 +254,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.5s;
 }
 .main .myName {
   position: absolute;
@@ -210,9 +265,11 @@ header {
   border-top: #925c3b solid 3px;
   border-right: #925c3b solid 3px;
   padding: 50px;
+  animation: entranceleft 1.3s ease 0.5s linear;
 }
 .main .myName.active {
   visibility: hidden;
+  animation: entranceleft 1.3s ease 0.5s linear;
 }
 .main .presentation {
   position: absolute;
@@ -223,9 +280,19 @@ header {
   border-bottom: #925c3b solid 3px;
   border-left: #925c3b solid 3px;
   padding: 50px;
+  animation: entranceright 1.3s ease 0.8s linear;
 }
 .main .presentation.active {
   visibility: hidden;
+  animation: entranceright 1.3s ease 0.8s linear;
+}
+@keyframes entranceright {
+  0% {
+    font-size: 4rem;
+  }
+  100% {
+    font-size: 8rem;
+  }
 }
 
 .arowUp {
@@ -236,6 +303,10 @@ header {
   font-size: 60px !important;
   color: #925c3b;
   z-index: 1500;
+  transition: 0.3s;
+}
+.arowUp.showArow {
+  visibility: visible;
 }
 .arowUp :hover {
   color: #3f2b1f;
@@ -334,17 +405,78 @@ header {
   left: 2vw;
 }
 
+/******************** PORTOFOLIO *********************/
+.container {
+  position: relative;
+  top: 15vh;
+}
+
+.col {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.siteOne,
+.siteTwo {
+  position: relative;
+  display: flex;
+  width: 30vw;
+  height: auto;
+  margin: 50px;
+}
+
+.visit {
+  position: absolute;
+  display: flex;
+  align-self: flex-end;
+  justify-self: center;
+  height: 30px;
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #925c3b;
+}
+
+.visit:hover {
+  color: #3f2b1f;
+}
+
 /************* SECTION CONTACT **************************/
-input,
-textarea {
-  background: #925c3b2a !important;
-  outline: none !important;
-  box-shadow: none !important;
+#contact {
+  margin-bottom: 5vh;
 }
 
 form {
   position: relative;
   left: 10%;
+}
+
+input,
+textarea {
+  background: #925c3b2a !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border: solid 2px #925c3b !important;
+  font-size: 1.5rem !important;
+  color: #925c3b !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #3f2b1f !important;
+}
+
+.inputOne {
+  margin-top: 10vh;
+}
+
+.inputTwo,
+.inputThree {
+  margin-top: -10vh;
+}
+
+.form-textarea {
+  margin-top: 5vh;
 }
 
 .mb-3,
@@ -353,7 +485,14 @@ textarea {
   color: #925c3b !important;
 }
 
+.form-control {
+  height: 8vh;
+}
+
 .btn {
+  position: relative;
+  left: -10%;
+  top: -90px;
   background: #925c3b2a;
   color: #925c3b;
 }
@@ -364,20 +503,45 @@ textarea {
 }
 
 /************** FOOTER ***********/
-.fab {
-  font-size: 5vh;
+footer {
+  position: relative;
+  display: flex;
+  height: 25vh;
+  margin-top: 100px;
+  background: #925c3b2a;
+  justify-content: center;
+  border-top: solid 2px #925c3b;
 }
-.fab.fa-facebook-square {
+footer .fab {
+  position: relative;
+  top: 50px;
+  font-size: 5vh;
+  left: 5vw;
+  margin: 0 15px;
+  color: #925c3b;
+  transition: 0.5s;
+}
+footer .fab.fab:hover {
+  transform: scale(1.4);
+}
+footer .fab.fa-facebook-square:hover {
   color: blue;
 }
-.fab.fa-github-square {
+footer .fab.fa-github-square:hover {
   color: white;
 }
-.fab.fa-twitter-square {
+footer .fab.fa-twitter-square:hover {
   color: #4444e6;
 }
-.fab.fa-linkedin {
+footer .fab.fa-linkedin:hover {
   color: #02025a;
+}
+footer p {
+  position: relative;
+  height: 10px;
+  top: 150px;
+  left: -8vw;
+  color: #925c3b;
 }
 
 /*# sourceMappingURL=index.css.map */
