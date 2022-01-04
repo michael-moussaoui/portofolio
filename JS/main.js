@@ -4,13 +4,21 @@ const toogler = document.querySelector('.navbar-toggler')
 const icon = document.querySelector('.navbar-toggler-icon')
 const menu = document.querySelector('.togglerMenu')
 const link = document.querySelector('.nav-link')
-const myName = document.querySelector('.myName')
-const presentation = document.querySelector('.presentation')
+const circleHover = document.querySelectorAll('.circleHover')
+const circleHover1 = document.querySelector('.circleHover1')
+const circleHover2 = document.querySelector('.circleHover2')
+const svg = document.querySelector('.svg')
+const myName = document.getElementById('myName')
+const presentation = document.getElementById('presentation')
 const navbarTop = document.querySelector('.navbar-nav-top')
 const linkTop = document.querySelector('.navbar-link-top')
 const navbarNav = document.querySelector('.navbar-nav')
 const arowUp = document.querySelector('.arowUp')
 const section = document.querySelector('.section')
+const title = document.querySelector('.sectionTitle')
+const aboutMe = document.querySelector('.aboutMe > p')
+
+
 
 
 
@@ -24,6 +32,8 @@ window.addEventListener('mousemove', (e) => {
 
 // Animation Menu au click
 toogler.addEventListener('click', () => {
+
+
     body.classList.toggle('active')
     body.classList.toggle('background')
     icon.classList.toggle('active')
@@ -31,10 +41,26 @@ toogler.addEventListener('click', () => {
     navbarNav.classList.toggle('clicked')
     myName.classList.toggle('active')
     presentation.classList.toggle('active')
+    svg.classList.toggle('active')
 
 
 })
 
+// Ajoute une class au survol du bouton menu
+circleHover.forEach(element => {
+
+
+    element.addEventListener('mouseover', () => {
+        mouse.classList.add('activeHover')
+
+    })
+
+    element.addEventListener('mouseout', () => {
+        mouse.classList.remove('activeHover')
+
+    })
+
+});
 // link.addEventListener('mouseout', () => {
 
 // })
@@ -43,6 +69,7 @@ window.addEventListener('mousemove', (e) => {
 
 
     const speed = myName.getAttribute('data-speed')
+    const speedP = presentation.getAttribute('data-speed')
 
     const x = (window.innerWidth + e.pageX * speed) / 100
     const y = (window.innerHeight + e.pageY * speed) / 100
@@ -56,7 +83,7 @@ window.addEventListener('mousemove', (e) => {
 // Afficher la barre de navigation au scroll
 window.addEventListener('scroll', (event) => {
 
-    if (scrollY > 500) {
+    if (scrollY > 800) {
         navbarTop.style.top = "0px"
         navbarTop.classList.add('active')
         arowUp.style.visibility = 'visible'
@@ -67,6 +94,31 @@ window.addEventListener('scroll', (event) => {
         arowUp.style.visibility = 'hidden'
 
     }
+})
+
+// Afficher la div aboutMe au scroll
+window.addEventListener('scroll', (e) => {
+    if (scrollY < 1125) {
+        // aboutMe.style.opacity = '1'
+        title.style.opacity = '1'
+        aboutMe.style.left = '0'
+
+    } else {
+        // aboutMe.style.opacity = '0.1'
+        aboutMe.style.left = '-120vh'
+        title.style.opacity = '0.1'
+    }
+
+})
+
+window.addEventListener('scroll', (e) => {
+    if (scrollY < 925) {
+        title.style.opacity = '1'
+
+    } else {
+        title.style.opacity = '0.1'
+    }
+
 })
 
 // hover navlink 

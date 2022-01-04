@@ -41,7 +41,7 @@
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                
                 <span class="navbar-toggler-icon"><i class="fas fa-times"></i></span>
-                <div class="togglerMenu"><br>Menu</div>
+                <div class="togglerMenu circleHover"><br>Menu</div>
               </button> 
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                  <!-- <div class="logo-navbar-nav"> -->
@@ -49,19 +49,19 @@
                 <!-- </div> -->
                   <ul class="navbar-nav">
                     <li class="nav-item">
-                      <a class="nav-link" href="#about">A propos</a>
+                      <a class="nav-link circleHover" href="#about">A propos</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#studies">Formation</a>
+                      <a class="nav-link circleHover" href="#studies">Formation</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#skills">Mes compétences</a>
+                      <a class="nav-link circleHover" href="#skills">Mes compétences</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#portofolio">Mon portofolio</a>
+                      <a class="nav-link circleHover" href="#portofolio">Mon portofolio</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#contact">Contact</a>
+                      <a class="nav-link circleHover" href="#contact">Contact</a>
                     </li>
                   </ul>
               </div>
@@ -75,15 +75,19 @@
     <a class="arowUp" href="#top"><i class="far fa-arrow-alt-circle-up"></i></a>
   
   <section class="section main">
-    <p class="myName" data-speed= "4">MOUSSAOUI Michael</p>
-    <p class="presentation" data-speed="4">développeur Web fullstack</p>
- 
-   
+   <div id="myName" data-speed= "4">
+    <p class="circleHover" >Michael Moussaoui</p>
+   </div>
+   <div id="presentation" data-speed="4">
+    <p class="circleHover" >développeur Web fullstack</p>
+   </div>
+     <img class="svg" src="./img/man-5179003.svg" alt="">
   </section>
+
     <section class=" section title one" id="about">
-      <div class="titleOne">A propos</div>
+      <div class="titleOne sectionTitle">A propos</div>
       <div class="aboutMe">
-        <p>Intéressé par l'informatique depuis toujours, je suis en reconversion professionnelle.
+        <p class="aboutP">Intéressé par l'informatique depuis toujours, je suis en reconversion professionnelle suite à une inaptitude professionnelle dans le métier de la sécurité.
           Déjà capable d'utiliser les technologies comme HTML5 et CSS3, je poursuis actuellement mon apprentissage (en ce moment JAVASCRIPT).
           Mon expérience et ma grande motivation sont parmi les atouts que je souhaite à présent partager au sein d'une équipe, afin de pratiquer, progresser et m'épanouir dans le développement web.</p>
           <img class="mike" src="./img/mikeCartoon.jpg" alt="Photo du développeur en cartoon">
@@ -91,47 +95,88 @@
     </section>
 
     <section class=" section title two" id="studies">
-      <div class="titleTwo">Formation</div>
+      <div class="titleTwo sectionTitle">Formation</div>
+      <p>actuellement en formation chez Studi afin d'obtenir le titre de graduate developpeur web full stack</p>
+      <div class="computerContainer">
+        <img class="computer" src="./img/computer-2023252.svg" alt="">
+        <img class="logoStudi" src="./img/Studi_logo.svg" alt="">
+    </div>
     </section>
 
     <section class=" section title" id="skills">
-      <div class="titleThree">Mes compétepences</div>
-      <div class="leftProgress">
+      
+     <div class="titleThree sectionTitle">Mes compétepences</div>
+     <h3 class="myLanguage">Mes langages</h3>
+      <div class="skillsContainer">
+       <div class="technoContainer"><img class="techno" src="./img/kisspng-web-development-html-logo-world-wide-web-consortiu-create-html-signature-5ab4731b29c055.073708591521775387171.png" alt="" ></div>
+       <div class="technoContainer"><img class="techno" src="./img/kisspng-cascading-style-sheets-css3-logo-html-5af803eba9dae7.8639835515262033716957.png" alt=""></div>
+       <div class="technoContainer"><img class="techno" src="./img/pngaaa.com-3801770.png" alt=""></div>
+       <div class="technoContainer"><img class="techno" src="./img/sass.png" alt=""></div>
+       <div class="technoContainer"><img class="techno" src="./img/kisspng-javascript-logo-html-clip-art-javascript-logo-5b5188b1a2a1f9.2428698915320700656662.png" alt=""></div>
+       <div class="technoContainer"><img class="techno" src="./img/kisspng-react-javascript-responsive-web-design-github-angu-github-5accac250cda95.4452823815233628530527.png" alt=""></div>
+       <div class="technoContainer"><img class="techno" src="./img/5a2305db957432.8491074815122446996122.png" alt=""></div>
+      </div>
+      <h3 class="myTools">Mes outils</h3>
+      <div class="toolsContainer">
+        <div class="workTools"><img class="tools" src="./img/kisspng-github-.png" alt=""></div>
+        <div class="workTools"><img class="tools" src="./img/kisspng-visual-studiocode-.png" alt=""></div>
+        <div class="workTools"><img class="tools" src="./img/kisspng-adobe-xd-.png" alt=""></div>
+      </div>
+      <!-- <div class="leftProgress">
        <div class="progress first">
-        <!-- <p>HTML5</p> -->
         <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%<span class="techno">HTML5</span></div>
       </div>
       <br>
       <div class="progress">
-        <!-- <p>CCS3</p> -->
         <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%<span class="techno">CCS3</span></div>
       </div>
       <br>
       <div class="progress">
-        <!-- <p>bootstrap</p> -->
         <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%<span class="techno">bootstrap</span></div>
       </div>
     </div>
     <div class="rightProgress">
       <div class="progress first">
-        <!-- <p>HTML5</p> -->
         <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%<span class="techno">HTML5</span></div>
       </div>
       <br>
       <div class="progress">
-        <!-- <p>CCS3</p> -->
         <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%<span class="techno">CCS3</span></div>
       </div>
       <br>
       <div class="progress">
-        <!-- <p>bootstrap</p> -->
         <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%<span class="techno">bootstrap</span></div>
       </div>  
+    </div> -->
+    <!-- <div class="codeProgrammation"> -->
+
+      <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  HTML5
+</button> -->
+
+<!-- Modal -->
+<!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">HTML5</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat, dolorem? Suscipit, et ullam ipsam accusamus illo, fugiat velit iste nihil doloribus in similique quod repudiandae necessitatibus. Corrupti sequi iure rerum non, nemo nesciunt perspiciatis, officiis tenetur accusamus ullam quam necessitatibus temporibus exercitationem delectus dolores quaerat autem aut. Nesciunt praesentium suscipit labore impedit corporis? Architecto deleniti consectetur et eligendi deserunt expedita ratione odit illo officia aut at, quaerat natus voluptatibus ab vero placeat suscipit quas necessitatibus. Quibusdam repellendus distinctio harum explicabo voluptates molestiae nesciunt recusandae sit incidunt eos eius blanditiis enim aliquam, vel eaque ut reprehenderit. Alias blanditiis quo magni, cumque, facere nostrum dicta distinctio odit quod officiis eligendi! Sed rerum, nam quas porro, modi quidem odio nobis facilis ex at numquam laborum excepturi.</p>
+      </div>
+     
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> 
+      </div>
     </div>
+  </div>
+</div>    -->
     </section>
 
     <section class=" section title" id="portofolio">
-      <div class="titleFour">Mon portofolio</div>
+      <div class="titleFour sectionTitle">Mon portofolio</div>
       <div class="container">
         <div class="row">
           <div class="col">
@@ -158,7 +203,7 @@
     </section>
 
     <section class="section title" id="contact">
-      <div class="titleFive">Contact</div>
+      <div class="titleFive sectionTitle">Contact</div>
       <form>
         <div class="mb-3">
           <label for="formGroupExampleInput" class="form-label"></label>
@@ -189,7 +234,7 @@
             <a href="https://twitter.com/moussaoui_3813/photo"><i class="fab fa-twitter-square"></i></a>
             <a href="https://linkedin.com/in/michael-moussaoui-251359216"><i class="fab fa-linkedin"></i></a>
         </div>
-        <p>Michael MOUSSAOUI - 2021 </p>
+        <p class="footerP">Michael MOUSSAOUI - 2022 </p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

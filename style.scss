@@ -18,7 +18,6 @@ $secondColor :rgb(0, 0, 0);
 
 body{
     overflow-x: hidden;
-    // background: #EDF0ED;
     background: #000;
     font-family: $font3;
     color: $firstColor;
@@ -39,14 +38,23 @@ body{
     border: #3f2b1f solid 3px;
     background: #3f2b1f;
     transform: translate(-50%, -50%);
-    transition: .2s ease;
+    transition: .3s ease;
     z-index:1800 ;
     pointer-events: none;
-    mix-blend-mode: difference;   
+    mix-blend-mode: difference;  
+    
+    &.activeHover{
+    background:#925c3b2a;
+    width: 90px;
+    height: 90px;
+    }
 }
 
 header{
-    height: 20vh;
+    height: 15vh;
+    background: linear-gradient(180deg, rgb(0, 0, 0) 50%, rgba(146, 92, 59, 0.192) 100%);
+    
+    
 }
 
 /*******NAVIGATION*********/ 
@@ -70,7 +78,7 @@ header{
         border-bottom: 1px solid #925c3b;
         list-style: none !important;
         justify-content: center;
-        background: #925c3b2a;
+        background: #925c3b31;
         transition: .3s;
         z-index: 600; 
         visibility: hidden; 
@@ -110,7 +118,7 @@ header{
         align-items: center;
         top: -3vh; 
         transition: .4s;
-        animation: slide-out-top 1.3s cubic-bezier(0.550, 0.085, 0.680, 0.530)  both;
+        // animation: slide-out-top 3.3s cubic-bezier(0.550, 0.085, 0.680, 0.530)  both;
         z-index: 100;
         
         &.clicked{     
@@ -121,7 +129,7 @@ header{
     .nav-item{
         transition: 1.5s;
         padding: 0;
-        margin: 10px;
+        margin: 15px;
       
         .nav-link{
             position: relative;
@@ -134,11 +142,7 @@ header{
             &:hover{
                 color: #925c3b2a !important;
                 font-size: 5rem;
-                transform: scale(1.3);
-                // animation: text-pop-up-top 1.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;  
-            }
-            &.active{
-                animation: textEntrance .5s ease 1.5s;   
+                transform: scale(1.3);  
             }
     }
 
@@ -150,7 +154,7 @@ header{
             }
             100% {
               
-               transform: translateY(-200px);
+               transform: translateY(-1000px);
                opacity: 1;
             }
           }
@@ -169,26 +173,6 @@ header{
           }         
     }  
        
-        @keyframes text-pop-up-top {
-            0% {
-            
-              text-shadow: none;
-            }
-            100%{
-            
-              text-shadow: 0 1px 0 #3f2b1f, 0 2px 0 #3f2b1f, 0 3px 0 #3f2b1f, 0 4px 0 #3f2b1f, 0 5px 0 #3f2b1f, 0 6px 0 #3f2b1f, 0 7px 0 #3f2b1f, 0 8px 0 #3f2b1f, 0 9px 0 #3f2b1f, 0 50px 30px rgb(36, 33, 32);
-            }
-          }
-
-        
-        @keyframes textEntrance {
-            0%{
-              opacity: 0;
-            }
-            100%{
-              opacity: 1;
-            }  
-        } 
     }
 
 .navbar-brand{
@@ -204,6 +188,7 @@ header{
     width: 5vw;
     border: none;
     z-index: 600;
+    border-radius: 50%;
     
 }
 
@@ -223,21 +208,23 @@ header{
     color:#925c3b;
     width: 70px;
     height: 70px;
+    border-radius: 50%;
     z-index: 800;
     
 
     &.active{
         animation: growUp 2.8s ease alternate backwards ;
         transition: .5s;
-        visibility: hidden;      
+        visibility: hidden;  
+        border-radius: 50%;    
     }
     
-    &:hover{
-        background: #925c3b2a;
-        border-radius: 50%;
-        border: #925c3b solid 1.5px;
+    // &:hover{
+    //     background: #925c3b2a;
+    //     border-radius: 50%;
+    //     border: #925c3b solid 1.5px;
 
-    }
+    // }
     @keyframes growUp {
         0%{
             background: #925c3b;
@@ -263,8 +250,10 @@ header{
     }
 }
 
-.navbar-toggler-icon {
+.navbar-toggler-icon,
+.fas .fa-times {
     position: absolute;
+    height: 30px;
     right: -1vw;
     font-size: 50px;
     color: #925c3b;
@@ -274,6 +263,7 @@ header{
 
     &.active{
         visibility: visible;
+        
         
     }
 
@@ -291,19 +281,7 @@ header{
                 transform: rotate(360deg);
             }
           }
-
-    // .logo-navbar-nav{
-    //     display: inline-block;
-    //     position: absolute;
-    //     height: 100px;
-    //     width: 20vw;
-    //     border: hotpink 2px solid;
-    // }
-   
-        
-                 
-           
-    
+            
 }
 
 .image{
@@ -318,6 +296,7 @@ header{
     position: relative;
     height: 100vh;
     width: 100%;
+    background: #925c3b31;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -325,57 +304,104 @@ header{
     
     
 
-    & .myName{
+    & #myName{
         position: absolute;
+        width: 50vw;
         top:8vh;
         font-size: 4.5rem;
         color: #925c3b;
         font-family: $font4;
-        border-top: #925c3b solid 3px;
-        border-right:#925c3b solid 3px;
-        padding: 50px;
-        animation: entranceleft 1.3s ease .5s linear;
+        // border-top: #925c3b solid 3px;
+        // border-right:#925c3b solid 3px;
+        padding-top: 20px;
+        padding-left: 30px;
+        animation: entranceleft 3.5s ease .3s both;
         
-
+        &.circleHover{
+                    color: #925c3b;
+                    width: 40vw;
+                    background: #3f2b1f;
+        
+                }
         
         &.active{
-            visibility: hidden;
-            animation: entranceleft 1.3s ease .5s linear ;
+            animation: exitleft 1s ease  both ;
           
         }
 
     }
-    & .presentation{
+    & #presentation{
         position: absolute;
+        width: 40vw;
         top:37vh;
         font-size: 4rem;
-        color: #925c3b;
-        // border-radius: 10px;
-        padding: 10px;
-        // background: #925c3b2a;
-        border-bottom: #925c3b solid 3px;
-        border-left:#925c3b solid 3px ;
-        padding: 50px;
-        animation: entranceright 1.3s ease .8s linear ;
-
-        &.active{
-            visibility: hidden;
-            animation: entranceright 1.3s ease .8s linear ;
+        color: #c9652c;   
+        // border-bottom: #925c3b solid 3px;
+        // border-left:#925c3b solid 3px ;
+        padding-bottom: 20px;
+        // padding-left: 20px;
+        // padding-right: 50px;
+        margin-left: 150px;
+        animation: entranceright 3.5s ease .3s both ;
+        
+        &.circleHover{
+            color: #925c3b;
+            width: 35vw;
+            
             
 
         }
+
+        &.active{
+            animation: exitright 1s ease  both ;
+            
+        }
     }
+
     @keyframes entranceright {
         0%{
-            font-size: 4rem;
+           left:2000px;
         }
         100%{
-            font-size: 8rem;
+            left: 350px; 
+        }
+    }
+    @keyframes entranceleft {
+        0%{
+            right:2000px ;
+        }
+        100%{
+            right: 350px;
+        }
+    }
+
+    @keyframes exitright {
+        0%{
+           left:350px;
+        }
+        100%{
+            left: 2000px; 
+        }
+    }
+    @keyframes exitleft {
+        0%{
+            right:350px ;
+        }
+        100%{
+            right: 2000px;
         }
     }
 }
 
+.svg {
+    height: 100vh;
+    width: auto;
+    transition: .3s;
 
+    &.active{
+        opacity: 0.2;
+    }
+}
 .arowUp{
     position: absolute;
     position: fixed;
@@ -385,17 +411,17 @@ header{
     color:#925c3b;
     z-index: 1500;
     transition: .3s;
+    visibility: hidden;
 
 
     &.showArow{
         visibility: visible;
     }
 
-    & :hover{
+    &:hover{
         color: #3f2b1f;
         transition: .3s;
-        background: #925c3b2a;
-        border-radius: 50%;
+        
     }
 }
 
@@ -412,24 +438,21 @@ header{
     
     
 
-    // & p {
-    //     display: flex;
-    //     font-size: 1.8rem;
-    //     margin-top: 25vh;
-    // }
+    & p {
+        display: flex;
+        font-size: 1.8rem;
+        margin-top: 25vh;
+    }
 }
 /*********** SECTION ABOUT **********/
 #about{
     position: relative;
     
 }
-.titleOne,
-.titleTwo,
-.titleThree,
-.titleFour,
-.titleFive{
+.sectionTitle{
     position: relative;
     top:15vh;
+    transition: .2s;  
     
 } 
 
@@ -437,7 +460,8 @@ header{
     position: relative;
     font-size: 1.5rem;
     margin-top: 25vh;
-    width: 60vw;
+    width: 60vw;   
+    
 } 
 .mike{
     position: absolute;
@@ -448,6 +472,36 @@ header{
     height: 50vh;
     border-radius: 35px;
 }
+.aboutP{
+    position: relative;
+    left:-120vh;
+    transition: 2.5s;
+}
+
+/****************** STUDIES *********************************/ 
+
+#studies{
+    background: linear-gradient(180deg, rgb(146, 92, 59, 0.192) 90%, rgba(0, 0, 0) 100%);
+}
+.computerContainer{
+    position: relative;
+}
+.computer{
+    
+    position: absolute;
+    left: 25%;
+    
+    
+
+}
+.logoStudi{
+    position: absolute;
+    left: 50%;
+    top:150px
+    
+    
+    
+}
 
 
 /*************** SECTION SKILLS ******************************/ 
@@ -455,55 +509,76 @@ header{
 #skills{
     position: relative;
 }
-.leftProgress,
-.rightProgress{
-    position: absolute;
-    display: inline-block;
-    width: 40vw;
-    top: 40vh;
-
-}
-
-.leftProgress{
-    left: 5vw;
-}
-.rightProgress{
-    right: 5vw;
-    
-}
-
-.progress{
+.myLanguage{
     position: relative;
-    left: 5vw;
-    width: 30vw;
-    height: 3vh;
-    margin: -15px;
-    background-color: #925c3b2a;
+    top:25vh
+}
+.skillsContainer{
+    position: relative;
+    top: 10vh;
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.technoContainer{
+    width: 100px;
+    height: 100px;
+    margin: 0 20px;
+    transition: .3s;
 
-}
-.first{
-    margin-top: 50px;
-}
-.progress-bar{
-    background: #925c3b;   
+    &:hover{
+        transform: scale(1.3);
+    }
     
 }
-
 .techno{
-    position: absolute;
-    left:75%;
-    color: #3f2b1f;   
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    
+    
+}
+.myTools{
+    position:relative;
+    top:5vh;
+}
+.toolsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 75px;
 }
 
-.techno1{
-    position: absolute;
-    color:aqua;
-    left:2vw;
-    
-    
+.workTools{
+    width: 100px;
+    height: 100px;
+    margin: 0 20px;
+    transition: .3s;
+
+    &:hover{
+        transform: scale(1.3);
+    }
 }
+
+.tools{
+   width: 80px;
+   height: 80px;
+   cursor: pointer;  
+}
+
+    
+
+
+
+
+
 /******************** PORTOFOLIO *********************/ 
-
+#portofolio{
+    background: linear-gradient(180deg, rgb(146, 92, 59, 0.192) 90%, rgba(0, 0, 0) 100%);
+}
 .container {
     position: relative;
     top:15vh
@@ -622,6 +697,7 @@ footer{
     position: relative;
     display: flex;
     height: 25vh;
+    width: 100vw;
     margin-top: 100px;
     background: #925c3b2a;
     justify-content: center;
@@ -638,7 +714,9 @@ footer{
     transition: .5s;
 
     &.fab:hover{
-        transform: scale(1.4);
+        transform: scale(1.4) rotate(45deg);
+        
+        
     }
 
     &.fa-facebook-square:hover{
@@ -663,4 +741,7 @@ footer{
      color: #925c3b;
 
  }
+// .footerP{
+//     margin: auto;
+// }
 }
