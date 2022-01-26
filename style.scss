@@ -478,10 +478,16 @@ header{
     transition: 2.5s;
 }
 
-/****************** STUDIES *********************************/ 
+/********************* STUDIES *********************************/ 
 
 #studies{
     background: linear-gradient(180deg, rgb(146, 92, 59, 0.192) 90%, rgba(0, 0, 0) 100%);
+    
+    
+
+}
+.studiesP{
+    margin-left: 2vw;
 }
 .computerContainer{
     position: relative;

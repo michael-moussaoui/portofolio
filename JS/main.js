@@ -15,9 +15,12 @@ const linkTop = document.querySelector('.navbar-link-top')
 const navbarNav = document.querySelector('.navbar-nav')
 const arowUp = document.querySelector('.arowUp')
 const section = document.querySelector('.section')
-const title = document.querySelector('.sectionTitle')
+const title = document.querySelector('.titleOne')
+const title2 = document.querySelector('.titleTwo')
+const studiesP = document.querySelector('.studiesP')
+const title3 = document.querySelector('.titleThree')
+const title4 = document.querySelector('.titleFour')
 const aboutMe = document.querySelector('.aboutMe > p')
-
 
 
 
@@ -105,18 +108,54 @@ window.addEventListener('scroll', (e) => {
 
     } else {
         // aboutMe.style.opacity = '0.1'
-        aboutMe.style.left = '-120vh'
+        aboutMe.style.left = '-130vh'
         title.style.opacity = '0.1'
     }
 
 })
 
 window.addEventListener('scroll', (e) => {
-    if (scrollY < 925) {
+    if (scrollY < 900) {
         title.style.opacity = '1'
 
     } else {
         title.style.opacity = '0.1'
+    }
+
+})
+window.addEventListener('scroll', (e) => {
+    if (scrollY < 975) {
+        aboutMe.style.opacity = '1'
+
+    } else {
+        aboutMe.style.opacity = '0.1'
+    }
+
+})
+window.addEventListener('scroll', (e) => {
+    if (scrollY < 1675) {
+        title2.style.opacity = '1'
+
+    } else {
+        title2.style.opacity = '0.1'
+    }
+
+})
+window.addEventListener('scroll', (e) => {
+    if (scrollY < 1865) {
+        studiesP.style.opacity = '1'
+
+    } else {
+        studiesP.style.opacity = '0.1'
+    }
+
+})
+window.addEventListener('scroll', (e) => {
+    if (scrollY < 2415) {
+        title3.style.opacity = '1'
+
+    } else {
+        title3.style.opacity = '0.1'
     }
 
 })

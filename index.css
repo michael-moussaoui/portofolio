@@ -390,9 +390,13 @@ header {
   transition: 2.5s;
 }
 
-/****************** STUDIES *********************************/
+/********************* STUDIES *********************************/
 #studies {
   background: linear-gradient(180deg, rgba(146, 92, 59, 0.192) 90%, black 100%);
+}
+
+.studiesP {
+  margin-left: 2vw;
 }
 
 .computerContainer {
