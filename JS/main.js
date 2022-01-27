@@ -19,8 +19,11 @@ const title = document.querySelector('.titleOne')
 const title2 = document.querySelector('.titleTwo')
 const studiesP = document.querySelector('.studiesP')
 const title3 = document.querySelector('.titleThree')
+const myLanguage = document.querySelector('.myLanguage')
+const myTools = document.querySelector('.myTools')
 const title4 = document.querySelector('.titleFour')
 const aboutMe = document.querySelector('.aboutMe > p')
+const title5 = document.querySelector('.titleFive')
 
 
 
@@ -156,6 +159,42 @@ window.addEventListener('scroll', (e) => {
 
     } else {
         title3.style.opacity = '0.1'
+    }
+
+})
+window.addEventListener('scroll', (e) => {
+    if (scrollY < 2615) {
+        myLanguage.style.opacity = '1'
+
+    } else {
+        myLanguage.style.opacity = '0.1'
+    }
+
+})
+window.addEventListener('scroll', (e) => {
+    if (scrollY < 2865) {
+        myTools.style.opacity = '1'
+
+    } else {
+        myTools.style.opacity = '0.1'
+    }
+
+})
+window.addEventListener('scroll', (e) => {
+    if (scrollY < 3200) {
+        title4.style.opacity = '1'
+
+    } else {
+        title4.style.opacity = '0.1'
+    }
+
+})
+window.addEventListener('scroll', (e) => {
+    if (scrollY < 3965) {
+        title5.style.opacity = '1'
+
+    } else {
+        title5.style.opacity = '0.1'
     }
 
 })
