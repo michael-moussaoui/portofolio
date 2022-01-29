@@ -603,9 +603,6 @@ footer .fab {
 footer .fab.fab:hover {
   transform: scale(1.4) rotate(45deg);
 }
-footer .fab.fa-facebook-square:hover {
-  color: blue;
-}
 footer .fab.fa-github-square:hover {
   color: white;
 }
