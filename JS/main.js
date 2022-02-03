@@ -145,7 +145,7 @@ window.addEventListener('scroll', (e) => {
 
 })
 window.addEventListener('scroll', (e) => {
-    if (scrollY < 1865) {
+    if (scrollY < 1855) {
         studiesP.style.opacity = '1'
 
     } else {
