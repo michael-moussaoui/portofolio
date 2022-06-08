@@ -71,8 +71,9 @@ circleHover.forEach(element => {
 
 // })
 
-window.addEventListener('mousemove', (e) => {
 
+
+window.addEventListener('mousemove', (e) => {
 
     const speed = myName.getAttribute('data-speed')
     const speedP = presentation.getAttribute('data-speed')
@@ -226,3 +227,11 @@ link.addEventListener('mouseover', e => {
 //         // do something
 //     }
 // });
+
+
+// Effacer le formulaire après la soumission
+window.onbeforeunload = () => {
+    for(const form of document.getElementsByTagName('form')) {
+      form.reset();
+    }
+  }
