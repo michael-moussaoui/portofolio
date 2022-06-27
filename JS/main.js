@@ -104,19 +104,20 @@ window.addEventListener('scroll', (event) => {
 })
 
 // Afficher la div aboutMe au scroll
-window.addEventListener('scroll', (e) => {
-    if (scrollY < 1125) {
-        // aboutMe.style.opacity = '1'
-        title.style.opacity = '1'
-        aboutMe.style.left = '0'
 
-    } else {
-        // aboutMe.style.opacity = '0.1'
-        aboutMe.style.left = '-130vh'
-        title.style.opacity = '0.1'
-    }
+// window.addEventListener('scroll', (e) => {
+//     if (scrollY < 1125) {
+//         // aboutMe.style.opacity = '1'
+//         title.style.opacity = '1'
+//         aboutMe.style.left = '0'
 
-})
+//     } else {
+//         // aboutMe.style.opacity = '0.1'
+//         aboutMe.style.left = '-130vh'
+//         title.style.opacity = '0.1'
+//     }
+
+// })
 
 window.addEventListener('scroll', (e) => {
     if (scrollY < 900) {

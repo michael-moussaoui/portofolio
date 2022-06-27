@@ -391,7 +391,7 @@ header {
 
 .aboutP {
 	position: relative;
-	left: -120vh;
+	/* left: -120vh; */
 	transition: 2.5s;
 }
 
@@ -509,10 +509,11 @@ header {
 }
 
 .siteOne,
-.siteTwo {
+.siteTwo,
+.siteThree {
 	position: relative;
 	display: flex;
-	width: 30vw;
+	width: 20vw;
 	height: auto;
 	margin: 50px;
 }
