@@ -630,10 +630,14 @@ footer .fab.fa-linkedin:hover {
 }
 footer p {
 	position: relative;
+
+	transform: translateX(-50%);
 	height: 10px;
 	top: 150px;
-	left: -8vw;
+	/* left: -8vw; */
 	color: #925c3b;
 }
 
-/*# sourceMappingURL=index.css.map */
+.social {
+	position: relative;
+}
