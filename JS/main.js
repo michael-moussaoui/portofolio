@@ -39,7 +39,7 @@ window.addEventListener('mousemove', (e) => {
 // Animation Menu au click
 toogler.addEventListener('click', () => {
 
-
+    
     body.classList.toggle('active')
     body.classList.toggle('background')
     icon.classList.toggle('active')
@@ -73,133 +73,40 @@ circleHover.forEach(element => {
 
 
 
-window.addEventListener('mousemove', (e) => {
+// window.addEventListener('mousemove', (e) => {
 
-    const speed = myName.getAttribute('data-speed')
-    const speedP = presentation.getAttribute('data-speed')
+//     const speed = myName.getAttribute('data-speed')
+//     const speedP = presentation.getAttribute('data-speed')
 
-    const x = (window.innerWidth + e.pageX * speed) / 100
-    const y = (window.innerHeight + e.pageY * speed) / 100
-    const x1 = (window.innerWidth - e.pageX * speed) / 100
-    const y1 = (window.innerHeight - e.pageY * speed) / 100
+//     const x = (window.innerWidth + e.pageX * speed) / 100
+//     const y = (window.innerHeight + e.pageY * speed) / 100
+//     const x1 = (window.innerWidth - e.pageX * speed) / 100
+//     const y1 = (window.innerHeight - e.pageY * speed) / 100
 
-    myName.style.transform = `translateX(${x}px) translateY(${y}px)`
-    presentation.style.transform = `translateX(${x1}px) translateY(${y1}px)`
+//     myName.style.transform = `translateX(${x}px) translateY(${y}px)`
+//     presentation.style.transform = `translateX(${x1}px) translateY(${y1}px)`
 
-})
+// })
 // Afficher la barre de navigation au scroll
 window.addEventListener('scroll', (event) => {
 
     if (scrollY > 800) {
-        navbarTop.style.top = "0px"
-        navbarTop.classList.add('active')
+        navbarNav.style.top = "0px"
+        navbarNav.classList.add('active')
         arowUp.style.visibility = 'visible'
 
     } else {
-        navbarTop.style.top = "-100px"
-        navbarTop.classList.remove('showArow')
+        navbarNav.style.top = "-100px"
+        navbarNav.classList.remove('active')
         arowUp.style.visibility = 'hidden'
 
     }
 })
 
-// Afficher la div aboutMe au scroll
 
-// window.addEventListener('scroll', (e) => {
-//     if (scrollY < 1125) {
-//         // aboutMe.style.opacity = '1'
-//         title.style.opacity = '1'
-//         aboutMe.style.left = '0'
 
-//     } else {
-//         // aboutMe.style.opacity = '0.1'
-//         aboutMe.style.left = '-130vh'
-//         title.style.opacity = '0.1'
-//     }
 
-// })
 
-window.addEventListener('scroll', (e) => {
-    if (scrollY < 900) {
-        title.style.opacity = '1'
-
-    } else {
-        title.style.opacity = '0.1'
-    }
-
-})
-window.addEventListener('scroll', (e) => {
-    if (scrollY < 975) {
-        aboutMe.style.opacity = '1'
-
-    } else {
-        aboutMe.style.opacity = '0.1'
-    }
-
-})
-window.addEventListener('scroll', (e) => {
-    if (scrollY < 1675) {
-        title2.style.opacity = '1'
-
-    } else {
-        title2.style.opacity = '0.1'
-    }
-
-})
-window.addEventListener('scroll', (e) => {
-    if (scrollY < 1855) {
-        studiesP.style.opacity = '1'
-
-    } else {
-        studiesP.style.opacity = '0.1'
-    }
-
-})
-window.addEventListener('scroll', (e) => {
-    if (scrollY < 2415) {
-        title3.style.opacity = '1'
-
-    } else {
-        title3.style.opacity = '0.1'
-    }
-
-})
-window.addEventListener('scroll', (e) => {
-    if (scrollY < 2615) {
-        myLanguage.style.opacity = '1'
-
-    } else {
-        myLanguage.style.opacity = '0.1'
-    }
-
-})
-window.addEventListener('scroll', (e) => {
-    if (scrollY < 2865) {
-        myTools.style.opacity = '1'
-
-    } else {
-        myTools.style.opacity = '0.1'
-    }
-
-})
-window.addEventListener('scroll', (e) => {
-    if (scrollY < 3200) {
-        title4.style.opacity = '1'
-
-    } else {
-        title4.style.opacity = '0.1'
-    }
-
-})
-window.addEventListener('scroll', (e) => {
-    if (scrollY < 3965) {
-        title5.style.opacity = '1'
-
-    } else {
-        title5.style.opacity = '0.1'
-    }
-
-})
 
 // hover navlink 
 link.addEventListener('mouseover', e => {
@@ -208,26 +115,7 @@ link.addEventListener('mouseover', e => {
 
 })
 
-// Modifier l'opacité au scroll
 
-// window.addEventListener('scroll', () => {
-//     let height = document.scrollTop
-//     if (height > 501) {
-//         section.style.background = blue
-//     }
-//     //  else {
-//     //     section.style.background = green
-//     // }
-
-// })
-
-// $(window).scroll(function () {
-//     var height = $(window).scrollTop();
-
-//     if (height > some_number) {
-//         // do something
-//     }
-// });
 
 
 // Effacer le formulaire après la soumission
