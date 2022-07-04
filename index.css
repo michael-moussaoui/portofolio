@@ -212,8 +212,12 @@ header {
 }
 @media screen and (max-width: 450px) {
 	h2 {
+		position: relative;
 		font-size: 1.9rem;
+		top: 10vh !important;
+		padding-bottom: 5vh;
 	}
+
 	.navbar-nav {
 		/* position: relative; */
 		position: fixed;
@@ -432,7 +436,7 @@ header {
 /********* RESPONSIVE **********/
 @media screen and (min-width: 300px) and (max-width: 450px) {
 	#myName {
-		font-size: 2.1rem !important;
+		font-size: 1.9rem !important;
 		top: -3vh !important;
 		width: 100%;
 	}
@@ -440,7 +444,7 @@ header {
 		visibility: hidden;
 	}
 	#presentation {
-		font-size: 1.9rem !important;
+		font-size: 1.5rem !important;
 		top: 5vh !important;
 		width: 100%;
 		margin: 0 auto;
@@ -454,6 +458,7 @@ header {
 @media screen and (max-width: 1280px) {
 	.svg {
 		width: 85vw;
+		top: 5vh;
 	}
 }
 
@@ -528,8 +533,13 @@ p.aboutP {
 	p.aboutP {
 		width: 90vw;
 		top: 1vh;
-		font-size: 1.3rem;
+		font-size: 1.2rem;
 		margin: 10vh auto;
+	}
+
+	.myCV {
+		position: relative;
+		top: -10vh;
 	}
 }
 
@@ -564,6 +574,21 @@ p.aboutP {
 	left: 50%;
 	top: 15%;
 	width: 8vw;
+}
+/************** RESPONSIVE *******************/
+@media screen and (max-width: 767px) {
+	.studiesP {
+		top: -15vh;
+		font-size: 1.2rem !important;
+		width: 80vw;
+		margin: 0 auto;
+	}
+	.computer {
+		width: 70vw;
+	}
+	.logoStudi {
+		width: 20vw;
+	}
 }
 
 /*************** SECTION SKILLS ******************************/
@@ -641,6 +666,20 @@ p.aboutP {
 	cursor: pointer;
 }
 
+/************* RESPONSIVE *************/
+
+@media screen and (max-width: 768px) {
+	.skillsContainer {
+		width: 90vw;
+		margin: 5vh auto;
+	}
+	.techno,
+	.tools {
+		width: 50px;
+		height: 50px;
+	}
+}
+
 /******************** PORTOFOLIO *********************/
 #portofolio {
 	position: relative;
@@ -685,6 +724,21 @@ p.aboutP {
 
 .visit:hover {
 	color: #3f2b1f;
+}
+
+/*********** RESPONSIVE ***************/
+
+@media (max-width: 768px) {
+	.siteContainer {
+		top: 2vh;
+	}
+	.siteOne,
+	.siteTwo,
+	.siteThree {
+		width: 60vw;
+		height: 15vh;
+		margin-bottom: 30px;
+	}
 }
 
 /************* SECTION CONTACT **************************/
@@ -795,4 +849,17 @@ footer p {
 
 .social {
 	position: relative;
+}
+
+/****** RESPONSIVE *******/
+
+@media (max-width: 768px) {
+	footer .fab {
+		top: 50px;
+		font-size: 6.5vh;
+		left: 50%;
+		margin: 0 15px;
+		color: #925c3b;
+		transition: 0.5s;
+	}
 }
