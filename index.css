@@ -267,6 +267,10 @@ header {
 		/* background-color: green; */
 		right: 3vw;
 	}
+
+	#mouse {
+		display: none;
+	}
 }
 
 /************* MAIN SECTION *************/
@@ -434,7 +438,26 @@ header {
 }
 
 /********* RESPONSIVE **********/
-@media screen and (min-width: 300px) and (max-width: 450px) {
+@media screen and (max-width: 350px) {
+	#myName {
+		font-size: 1.5rem !important;
+		width: 100vw;
+		top: -1vh;
+	}
+	#presentation {
+		font-size: 1.3rem !important;
+		width: 100vw;
+		top: 8vh;
+	}
+	#welcome {
+		display: none;
+	}
+	.svg {
+		height: 70vh;
+		top: 16vh !important;
+	}
+}
+@media screen and (min-width: 351px) and (max-width: 450px) {
 	#myName {
 		font-size: 1.9rem !important;
 		top: -3vh !important;
@@ -452,6 +475,10 @@ header {
 
 	#welcome {
 		visibility: hidden;
+	}
+
+	.arowUp {
+		font-size: 45px !important;
 	}
 }
 
@@ -522,7 +549,20 @@ p.aboutP {
 	color: #925c3b;
 	border: 2px solid #925c3b;
 }
-
+@media only screen and (max-width: 350px) {
+	.titleOne {
+		top: -5vh !important;
+	}
+	.aboutP {
+		width: 98vw !important;
+		top: -15vh !important;
+		font-size: 1.1rem !important;
+	}
+	.myCV {
+		top: -30vh !important;
+		font-size: 1.3rem;
+	}
+}
 @media only screen and (max-width: 760px) {
 	.sectionTitle {
 		position: relative;
@@ -576,6 +616,7 @@ p.aboutP {
 	width: 8vw;
 }
 /************** RESPONSIVE *******************/
+
 @media screen and (max-width: 767px) {
 	.studiesP {
 		top: -15vh;
@@ -668,6 +709,34 @@ p.aboutP {
 
 /************* RESPONSIVE *************/
 
+@media screen and (max-width: 350px) {
+	.titleThree {
+		top: 3vh !important;
+	}
+	.myLanguage {
+		top: -2vh !important;
+	}
+	.skillsContainer {
+		top: -2vh !important;
+	}
+	.myTools {
+		top: -3vh !important;
+	}
+	.technoContainer {
+		margin: 0 1vw;
+		padding: 0vh 1vw !important;
+		height: 60px !important;
+	}
+	.toolsContainer {
+		top: -3vh !important;
+	}
+	.workTools {
+		margin: 0 1vw;
+		padding: 0vh 1vw !important;
+		height: 60px !important;
+	}
+}
+
 @media screen and (max-width: 768px) {
 	.skillsContainer {
 		width: 90vw;
@@ -727,6 +796,16 @@ p.aboutP {
 }
 
 /*********** RESPONSIVE ***************/
+
+@media screen and (max-width: 350px) {
+	.siteOne,
+	.siteTwo,
+	.siteThree {
+		margin: 30px;
+	}
+	.visit {
+	}
+}
 
 @media (max-width: 768px) {
 	.siteContainer {
@@ -805,6 +884,28 @@ textarea {
 	transition: 0.3s;
 }
 
+/********* RESPONSIVE ***********/
+
+@media screen and (max-width: 350px) {
+	form {
+		top: -10vh !important;
+	}
+	.inputOne {
+		margin-top: 5vh;
+	}
+
+	.inputTwo,
+	.inputThree {
+		margin-top: -15vh;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	form {
+		top: -10vh;
+	}
+}
+
 /************** FOOTER ***********/
 footer {
 	position: relative;
@@ -854,6 +955,9 @@ footer p {
 /****** RESPONSIVE *******/
 
 @media (max-width: 768px) {
+	/* footer {
+		height: 25vh;
+	} */
 	footer .fab {
 		top: 50px;
 		font-size: 6.5vh;
