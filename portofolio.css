@@ -1,0 +1,99 @@
+/******************** PORTOFOLIO *********************/
+#portofolio {
+	position: relative;
+	background: linear-gradient(
+		180deg,
+		rgba(146, 92, 59, 0.192) 90%,
+		black 100%
+	);
+}
+
+.container {
+	position: relative;
+	top: 15vh;
+}
+
+.col {
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+.siteOne,
+.siteTwo,
+.siteThree {
+	position: relative;
+	display: flex;
+	width: 20vw;
+	height: auto;
+	margin: 50px;
+	transition: transform 0.5s;
+	border: 2px solid #925c3b;
+}
+
+.visit {
+	position: absolute;
+	display: flex;
+	align-self: flex-end;
+	justify-self: center;
+	height: 30px;
+	font-size: 0.8rem;
+	text-decoration: none;
+	color: #925c3b;
+}
+
+.visit:hover {
+	color: #3f2b1f;
+}
+
+/*********** RESPONSIVE mobile ***************/
+
+@media screen and (max-width: 350px) {
+	.siteOne,
+	.siteTwo,
+	.siteThree {
+		margin: 30px;
+	}
+	.visit {
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.siteContainer {
+		top: 2vh;
+	}
+	.siteOne,
+	.siteTwo,
+	.siteThree {
+		width: 60vw;
+		height: 15vh;
+		margin-bottom: 30px;
+	}
+}
+/************* RESPONSIVE tablet *************/
+
+@media screen and (min-width: 768px) and (max-width: 1290px) {
+	#portofolio {
+		height: 130vh;
+	}
+	.siteOne,
+	.siteTwo,
+	.siteThree {
+		width: 60vw;
+		height: auto;
+		/* margin-bottom: 1vh; */
+		top: -5vh;
+	}
+	.visit {
+		top: 5vh;
+		right: 2vw;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.siteOne:hover,
+	.siteTwo:hover,
+	.siteThree:hover {
+		transform: scale(1.2);
+	}
+}

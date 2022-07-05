@@ -1,0 +1,107 @@
+/************* SECTION CONTACT **************************/
+#contact {
+	margin-bottom: 5vh;
+}
+
+form {
+	position: relative;
+	left: 10%;
+}
+
+input,
+textarea {
+	background: #925c3b2a !important;
+	outline: none !important;
+	box-shadow: none !important;
+	border: solid 2px #925c3b !important;
+	font-size: 1.2rem !important;
+	color: #925c3b !important;
+}
+textarea {
+	resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+	color: #3f2b1f !important;
+}
+
+.inputOne {
+	margin-top: 10vh;
+}
+
+.inputTwo,
+.inputThree {
+	margin-top: -10vh;
+}
+
+.form-textarea {
+	margin-top: 5vh;
+}
+
+.mb-3,
+textarea {
+	width: 80vw !important;
+	color: #925c3b !important;
+}
+
+.form-control {
+	height: 8vh;
+}
+
+.btn {
+	position: relative;
+	left: -10%;
+	top: -90px;
+	background: #925c3b2a;
+	color: #925c3b;
+}
+.btn:hover {
+	background: #925c3b;
+	color: #3f2b1f;
+	transition: 0.3s;
+}
+
+/********* RESPONSIVE mobile ***********/
+
+@media screen and (max-width: 350px) {
+	form {
+		top: -10vh !important;
+	}
+	.inputOne {
+		margin-top: 5vh;
+	}
+
+	.inputTwo,
+	.inputThree {
+		margin-top: -15vh;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	form {
+		top: -10vh;
+	}
+}
+/********* RESPONSIVE tablet ***********/
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+	#contact {
+		height: 100vh;
+	}
+	form {
+		top: -5vh;
+	}
+	.inputOne,
+	.inputTwo,
+	.inputThree {
+		margin-bottom: 10vh !important;
+	}
+	.btn {
+		width: 30vw;
+		height: 5vh;
+	}
+	textarea {
+		height: 20vh !important;
+	}
+}

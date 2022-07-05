@@ -1,0 +1,185 @@
+/************* HOME SECTION *************/
+.home {
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	background: linear-gradient(
+		rgba(146, 92, 59, 0.192) 90%,
+		black 100%
+	);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s;
+	font-family: "Permanent Marker", cursive;
+}
+
+/* .main #myName {	
+	animation: entranceleft 3.5s ease 0.3s both;
+} */
+
+#myName {
+	position: absolute;
+	top: 10vh;
+	left: 50%;
+	transform: translateX(-40%);
+	color: #925c3b;
+	font-size: 4rem;
+	/* animation: entranceleft 3.5s ease 0.3s both; */
+}
+#presentation {
+	position: absolute;
+	top: 20vh;
+	left: 50%;
+	transform: translateX(-40%);
+	color: #c9652c;
+	font-size: 3.5rem;
+	/* animation: entranceright 3.5s ease 0.3s both; */
+
+	/* transform: translateX(-75px); */
+}
+#welcome {
+	color: #925c3b;
+	font-size: 1.5rem;
+}
+/* #myName.circleHover {
+	color: #925c3b;
+	background: #3f2b1f;
+	
+} */
+.home #myName.active {
+	animation: exitleft 1s ease both;
+}
+
+/* .main #presentation.circleHover {
+	color: #925c3b;
+	
+} */
+
+.svg {
+	height: 100vh;
+	width: auto;
+	transition: 0.3s;
+	left: 3vw;
+	position: absolute;
+}
+.svg.active {
+	opacity: 0.2;
+}
+
+.arowUp {
+	position: absolute;
+	position: fixed;
+	right: 3vw;
+	bottom: 5vh;
+	font-size: 60px !important;
+	color: #925c3b;
+	z-index: 1500;
+	transition: 0.3s;
+	visibility: hidden;
+}
+.arowUp.showArow {
+	visibility: visible;
+}
+.arowUp:hover {
+	color: #3f2b1f;
+	transition: 0.3s;
+}
+
+.title {
+	height: 100vh;
+	width: 100%;
+	font-size: 4.5rem;
+	text-align: center;
+	font-family: "Permanent Marker", cursive;
+	color: #925c3b;
+}
+.title p {
+	display: flex;
+	font-size: 1.8rem;
+	margin-top: 25vh;
+}
+.scrollToAbout {
+	position: absolute;
+	bottom: 10vh;
+	left: 80vw;
+}
+
+.fa-hand-point-down {
+	position: absolute;
+	top: -20vh;
+	cursor: pointer;
+	font-size: 7vh;
+	color: #925c3b;
+	z-index: 10000;
+}
+
+/********* RESPONSIVE mobile **********/
+@media screen and (max-width: 350px) {
+	#myName {
+		font-size: 1.5rem !important;
+		width: 100vw;
+		top: -1vh;
+	}
+	#presentation {
+		font-size: 1.3rem !important;
+		width: 100vw;
+		top: 8vh;
+	}
+	#welcome {
+		display: none;
+	}
+	.svg {
+		height: 70vh;
+		top: 16vh !important;
+	}
+}
+@media screen and (min-width: 351px) and (max-width: 767px) {
+	#myName {
+		font-size: 1.9rem !important;
+		top: -3vh !important;
+		width: 100%;
+	}
+	#myName.active {
+		visibility: hidden;
+	}
+	#presentation {
+		font-size: 1.5rem !important;
+		top: 5vh !important;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	#welcome {
+		visibility: hidden;
+	}
+
+	.arowUp {
+		font-size: 45px !important;
+	}
+	.svg {
+		height: 72vh;
+		width: auto;
+	}
+}
+/********** RESPONSIVE tablet ************/
+
+@media screen and and (min-width: 768px) (max-width: 1280px) {
+	#myName {
+		font-size: 2.5rem;
+		top: -5vh;
+	}
+	#presentation {
+		font-size: 1.9rem;
+		top: 1vh;
+	}
+	#welcome {
+		position: relative;
+		top: -5vh;
+		font-size: 1.6rem !important;
+	}
+	.svg {
+		width: 85vw;
+		top: 5vh;
+	}
+}

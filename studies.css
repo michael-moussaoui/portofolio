@@ -1,0 +1,58 @@
+/********************* STUDIES *********************************/
+#studies {
+	/* position: relative; */
+	width: 100vw;
+	min-height: 100vh;
+	background: linear-gradient(
+		180deg,
+		rgba(146, 92, 59, 0.192) 90%,
+		black 100%
+	);
+}
+
+.studiesP {
+	position: relative;
+	margin-left: 2vw;
+}
+
+.computerContainer {
+	position: relative;
+}
+
+.computer {
+	position: relative;
+	width: 35vw;
+}
+
+.logoStudi {
+	position: absolute;
+	left: 50%;
+	top: 15%;
+	width: 8vw;
+}
+/************** RESPONSIVE mobile *******************/
+
+@media screen and (max-width: 767px) {
+	.studiesP {
+		top: -15vh;
+		font-size: 1.2rem !important;
+		width: 80vw;
+		margin: 0 auto;
+	}
+	.computer {
+		width: 70vw;
+	}
+	.logoStudi {
+		width: 20vw;
+	}
+}
+/********** RESPONSIVE tablet ************/
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+	.computer {
+		width: 70vw;
+	}
+	.logoStudi {
+		width: 20vw;
+	}
+}

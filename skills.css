@@ -1,0 +1,126 @@
+/*************** SECTION SKILLS ******************************/
+#skills {
+	position: relative;
+	/* margin:0 auto; */
+	background: linear-gradient(
+		180deg,
+		black 90%,
+		rgba(146, 92, 59, 0.192) 100%
+	);
+}
+
+.myLanguage {
+	position: relative;
+	top: 15vh;
+}
+
+.skillsContainer {
+	position: relative;
+	top: 15vh;
+	width: 100vw;
+	margin-top: 5vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.technoContainer {
+	width: 100px;
+	height: 100px;
+	/* margin: 0 ; */
+	transition: 0.3s;
+	/* padding:0; */
+}
+.technoContainer:hover {
+	transform: scale(1.3);
+}
+
+.techno {
+	width: 80px;
+	height: 80px;
+	cursor: pointer;
+}
+
+.myTools {
+	position: relative;
+	top: 20vh;
+}
+
+.toolsContainer {
+	position: relative;
+	top: 20vh;
+	display: flex;
+	flex-direction: row;
+	width: 100vw;
+	justify-content: center;
+	margin-top: 5vh;
+}
+
+.workTools {
+	width: 100px;
+	height: 100px;
+	margin: 0 20px;
+	transition: 0.3s;
+}
+.workTools:hover {
+	transform: scale(1.3);
+}
+
+.tools {
+	width: 80px;
+	height: 80px;
+	cursor: pointer;
+}
+
+/************* RESPONSIVE mobile *************/
+
+@media screen and (max-width: 350px) {
+	.titleThree {
+		top: 3vh !important;
+	}
+	.myLanguage {
+		top: -2vh !important;
+	}
+	.skillsContainer {
+		top: -2vh !important;
+	}
+	.myTools {
+		top: -3vh !important;
+	}
+	.technoContainer {
+		margin: 0 1vw;
+		padding: 0vh 1vw !important;
+		height: 60px !important;
+	}
+	.toolsContainer {
+		top: -3vh !important;
+	}
+	.workTools {
+		margin: 0 1vw;
+		padding: 0vh 1vw !important;
+		height: 60px !important;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.skillsContainer {
+		width: 90vw;
+		margin: 5vh auto;
+	}
+	.techno,
+	.tools {
+		width: 50px;
+		height: 50px;
+	}
+}
+
+/************* RESPONSIVE tablet *************/
+
+@media screen and (min-width: 768px) and (max-width: 1290px) {
+	.techno,
+	.tools {
+		width: 80px;
+		height: 80px;
+	}
+}
