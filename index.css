@@ -40,7 +40,11 @@ body.background {
 h2 {
 	font-size: 4.5rem;
 }
-
+@media screen and (min-width: 768px) and (max-width: 1290px) {
+	h2 {
+		font-size: 2.8rem !important;
+	}
+}
 header {
 	height: 15vh;
 	background: linear-gradient(
@@ -262,7 +266,7 @@ header {
 		z-index: 5000;
 	}
 }
-@media screen and (max-width: 1179px) {
+@media screen and (min-width: 768px) and (max-width: 1179px) {
 	.navbar-toggler-icon {
 		/* background-color: green; */
 		right: 3vw;
@@ -437,7 +441,7 @@ header {
 	z-index: 10000;
 }
 
-/********* RESPONSIVE **********/
+/********* RESPONSIVE mobile **********/
 @media screen and (max-width: 350px) {
 	#myName {
 		font-size: 1.5rem !important;
@@ -457,7 +461,7 @@ header {
 		top: 16vh !important;
 	}
 }
-@media screen and (min-width: 351px) and (max-width: 450px) {
+@media screen and (min-width: 351px) and (max-width: 767px) {
 	#myName {
 		font-size: 1.9rem !important;
 		top: -3vh !important;
@@ -480,9 +484,27 @@ header {
 	.arowUp {
 		font-size: 45px !important;
 	}
+	.svg {
+		height: 72vh;
+		width: auto;
+	}
 }
+/********** RESPONSIVE tablet ************/
 
-@media screen and (max-width: 1280px) {
+@media screen and and (min-width: 768px) (max-width: 1280px) {
+	#myName {
+		font-size: 2.5rem;
+		top: -5vh;
+	}
+	#presentation {
+		font-size: 1.9rem;
+		top: 1vh;
+	}
+	#welcome {
+		position: relative;
+		top: -5vh;
+		font-size: 1.6rem !important;
+	}
 	.svg {
 		width: 85vw;
 		top: 5vh;
@@ -563,7 +585,7 @@ p.aboutP {
 		font-size: 1.3rem;
 	}
 }
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 767px) {
 	.sectionTitle {
 		position: relative;
 		top: 5vh;
@@ -615,7 +637,7 @@ p.aboutP {
 	top: 15%;
 	width: 8vw;
 }
-/************** RESPONSIVE *******************/
+/************** RESPONSIVE mobile *******************/
 
 @media screen and (max-width: 767px) {
 	.studiesP {
@@ -624,6 +646,16 @@ p.aboutP {
 		width: 80vw;
 		margin: 0 auto;
 	}
+	.computer {
+		width: 70vw;
+	}
+	.logoStudi {
+		width: 20vw;
+	}
+}
+/********** RESPONSIVE tablet ************/
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
 	.computer {
 		width: 70vw;
 	}
@@ -707,7 +739,7 @@ p.aboutP {
 	cursor: pointer;
 }
 
-/************* RESPONSIVE *************/
+/************* RESPONSIVE mobile *************/
 
 @media screen and (max-width: 350px) {
 	.titleThree {
@@ -737,7 +769,7 @@ p.aboutP {
 	}
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 	.skillsContainer {
 		width: 90vw;
 		margin: 5vh auto;
@@ -746,6 +778,16 @@ p.aboutP {
 	.tools {
 		width: 50px;
 		height: 50px;
+	}
+}
+
+/************* RESPONSIVE tablet *************/
+
+@media screen and (min-width: 768px) and (max-width: 1290px) {
+	.techno,
+	.tools {
+		width: 80px;
+		height: 80px;
 	}
 }
 
@@ -795,7 +837,7 @@ p.aboutP {
 	color: #3f2b1f;
 }
 
-/*********** RESPONSIVE ***************/
+/*********** RESPONSIVE mobile ***************/
 
 @media screen and (max-width: 350px) {
 	.siteOne,
@@ -807,7 +849,7 @@ p.aboutP {
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	.siteContainer {
 		top: 2vh;
 	}
@@ -817,6 +859,25 @@ p.aboutP {
 		width: 60vw;
 		height: 15vh;
 		margin-bottom: 30px;
+	}
+}
+/************* RESPONSIVE tablet *************/
+
+@media screen and (min-width: 768px) and (max-width: 1290px) {
+	#portofolio {
+		height: 130vh;
+	}
+	.siteOne,
+	.siteTwo,
+	.siteThree {
+		width: 60vw;
+		height: auto;
+		/* margin-bottom: 1vh; */
+		top: -5vh;
+	}
+	.visit {
+		top: 5vh;
+		right: 2vw;
 	}
 }
 
@@ -884,7 +945,7 @@ textarea {
 	transition: 0.3s;
 }
 
-/********* RESPONSIVE ***********/
+/********* RESPONSIVE mobile ***********/
 
 @media screen and (max-width: 350px) {
 	form {
@@ -900,9 +961,31 @@ textarea {
 	}
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 	form {
 		top: -10vh;
+	}
+}
+/********* RESPONSIVE tablet ***********/
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+	#contact {
+		height: 100vh;
+	}
+	form {
+		top: -5vh;
+	}
+	.inputOne,
+	.inputTwo,
+	.inputThree {
+		margin-bottom: 10vh !important;
+	}
+	.btn {
+		width: 30vw;
+		height: 5vh;
+	}
+	textarea {
+		height: 20vh !important;
 	}
 }
 
@@ -912,7 +995,7 @@ footer {
 	display: flex;
 	height: 25vh;
 	width: 100vw;
-	margin-top: 100px;
+	margin-top: 120px;
 	background: #925c3b2a;
 	justify-content: center;
 	border-top: solid 2px #925c3b;
@@ -952,12 +1035,13 @@ footer p {
 	position: relative;
 }
 
-/****** RESPONSIVE *******/
+/****** RESPONSIVE mobile *******/
 
-@media (max-width: 768px) {
-	/* footer {
-		height: 25vh;
-	} */
+@media (max-width: 767px) {
+	footer {
+		height: 35vh;
+		margin-top: 90px;
+	}
 	footer .fab {
 		top: 50px;
 		font-size: 6.5vh;
@@ -965,5 +1049,15 @@ footer p {
 		margin: 0 15px;
 		color: #925c3b;
 		transition: 0.5s;
+	}
+}
+
+/****** RESPONSIVE tablet *******/
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+	footer {
+		height: 20vh;
+	}
+	.social {
 	}
 }
