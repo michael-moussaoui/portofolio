@@ -67,26 +67,7 @@ circleHover.forEach(element => {
     })
 
 });
-// link.addEventListener('mouseout', () => {
 
-// })
-
-
-
-// window.addEventListener('mousemove', (e) => {
-
-//     const speed = myName.getAttribute('data-speed')
-//     const speedP = presentation.getAttribute('data-speed')
-
-//     const x = (window.innerWidth + e.pageX * speed) / 100
-//     const y = (window.innerHeight + e.pageY * speed) / 100
-//     const x1 = (window.innerWidth - e.pageX * speed) / 100
-//     const y1 = (window.innerHeight - e.pageY * speed) / 100
-
-//     myName.style.transform = `translateX(${x}px) translateY(${y}px)`
-//     presentation.style.transform = `translateX(${x1}px) translateY(${y1}px)`
-
-// })
 // Afficher la barre de navigation au scroll
 window.addEventListener('scroll', (event) => {
 
