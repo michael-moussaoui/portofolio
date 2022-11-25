@@ -19,6 +19,17 @@ body.background {
 	transition: ease-in-out 0.3s;
 	animation: changeBackgroundColor 1.5s both;
 }
+body::-webkit-scrollbar {
+	width: 15px;
+	border-left: solid 1px #925c3b;
+}
+body::-webkit-scrollbar-track {
+	background: #925c3b2a;
+}
+body::-webkit-scrollbar-thumb {
+	background: #925c3b;
+	border-radius: 20px;
+}
 
 #mouse {
 	position: absolute;
@@ -57,23 +68,25 @@ header {
 
 /*******NAVIGATION*********/
 .navbar {
-	/* position: absolute; */
-	/* height: 10vh; */
 	width: 100vw;
 	background: transparent !important;
 	z-index: 50;
-	/* display: flex; */
 	position: fixed;
 }
 .togglerMenu {
 	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	top: 3vh;
 	right: 3vw;
 	visibility: visible;
 	cursor: pointer;
-	color: #925c3b;
-	width: 50px;
-	height: 50px;
+	background: #7f5539;
+	color: #432818;
+	font-weight: bold;
+	width: 70px;
+	height: 70px;
 	border-radius: 50%;
 	z-index: 800;
 }
@@ -92,7 +105,6 @@ header {
 	left: -30vw;
 }
 .navbar-nav {
-	position: relative;
 	position: fixed;
 	align-items: center;
 	font-size: 1.9rem;
@@ -126,8 +138,6 @@ header {
 }
 
 .navbar-brand {
-	/* position: relative;
-	left: 2vw; */
 	font-size: 1.8rem;
 	z-index: 20000;
 }
@@ -141,10 +151,11 @@ header {
 
 .logo {
 	position: relative;
-	top: -3vh;
-	height: 13vh;
+	top: -0.5rem;
+	height: 8.5vh;
+	background-color: #7f5539;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 749px) {
 	h2 {
 		position: relative;
 		font-size: 1.9rem;
@@ -153,12 +164,10 @@ header {
 	}
 
 	.navbar-nav {
-		/* position: relative; */
-		position: fixed;
-		top: 10vh;
+		top: 0vh !important;
 		width: 70vw;
 		left: -90vw;
-		height: 120vh;
+		height: 100vh;
 		background: #180f0a !important;
 		border-right: 2px solid #925c3b;
 		visibility: visible;
@@ -174,10 +183,6 @@ header {
 	}
 
 	.navbar-nav.clicked {
-		position: fixed;
-		top: 10vh;
-		width: 70vw;
-		height: 120vh;
 		left: 0vw;
 		background: #180f0a !important;
 		border-right: 2px solid #925c3b;
@@ -190,29 +195,27 @@ header {
 		z-index: 5000;
 	}
 }
+.togglerMenu {
+	height: 50px;
+	width: 50px;
+	right: 10px;
+	transform: translate(-50%);
+}
 
-@media screen and (min-width: 750px) and (max-width: 1179px) {
+@media screen and (min-width: 750px) and (max-width: 1290px) {
 	h2 {
 		font-size: 2rem;
 	}
 	.navbar-nav {
-		position: relative;
 		position: fixed;
 		width: 70vw;
-		top: 10vh;
-		height: 120vh;
+		top: 0vh !important;
+		height: 100vh;
 		left: -80vw;
-		visibility: visible;
-		transition: 2.3s;
-	}
-	.navbar-nav.clicked {
-		position: fixed;
-		top: 10vh;
-		width: 70vw;
-		height: 120vh;
-		left: 0vw;
 		background: #180f0a !important;
 		border-right: 2px solid #925c3b;
+		visibility: visible;
+		transition: 1.5s;
 	}
 	.navbar-toggler-icon {
 		top: 5vh;
@@ -223,7 +226,6 @@ header {
 	.navbar-toggler-icon.active {
 		opacity: 1;
 		top: 5vh;
-		/* left: -30vw; */
 	}
 
 	.nav-link {
@@ -235,18 +237,22 @@ header {
 		z-index: 5000;
 	}
 }
-@media screen and (min-width: 768px) and (max-width: 1179px) {
+@media screen and (min-width: 768px) and (max-width: 1290px) {
 	.navbar-toggler-icon {
-		/* background-color: green; */
 		right: 3vw;
 		top: 10vh;
 		font-size: 1.8rem;
+	}
+	.togglerMenu {
+		height: 80px;
+		width: 80px;
 	}
 
 	#mouse {
 		display: none;
 	}
 }
+/* END NAVIGATION */
 
 /************** FOOTER ***********/
 footer {
@@ -256,14 +262,23 @@ footer {
 	width: 100vw;
 	margin-top: 120px;
 	background: #925c3b2a;
-	justify-content: center;
 	border-top: solid 2px #925c3b;
 }
-footer .fab {
+
+.social {
 	position: relative;
-	top: 50px;
+	display: flex;
+	left: 50%;
+	top: -1rem;
+	transform: translateX(-50%);
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	height: 15vh;
+	width: 100vw;
+}
+footer .fab {
 	font-size: 5vh;
-	left: 5vw;
 	margin: 0 15px;
 	color: #925c3b;
 	transition: 0.5s;
@@ -280,23 +295,31 @@ footer .fab.fa-twitter-square:hover {
 footer .fab.fa-linkedin:hover {
 	color: #02025a;
 }
-footer p {
+.footerP {
 	position: relative;
-
-	transform: translateX(-50%);
-	height: 10px;
-	top: 150px;
-	/* left: -8vw; */
+	height: 1.8rem;
+	top: 90px;
+	right: 50%;
+	transform: translateX(50%);
 	color: #925c3b;
-}
-
-.social {
-	position: relative;
 }
 
 /****** RESPONSIVE mobile *******/
 
-@media (max-width: 767px) {
+@media screen and (max-width: 350px) {
+	footer {
+		height: 30vh;
+		margin-top: 150px;
+	}
+	.social {
+		width: 100%;
+	}
+	footer .fab {
+		font-size: 7vh;
+	}
+}
+
+@media screen and (min-width: 351px) and (max-width: 767px) {
 	footer {
 		height: 35vh;
 		margin-top: 90px;
@@ -321,3 +344,5 @@ footer p {
 		margin: 0 auto !important;
 	}
 }
+
+/* END FOOTER */

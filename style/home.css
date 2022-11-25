@@ -33,7 +33,7 @@
 	left: 50%;
 	transform: translateX(-40%);
 	color: #c9652c;
-	font-size: 3.5rem;
+	font-size: 2rem;
 	/* animation: entranceright 3.5s ease 0.3s both; */
 
 	/* transform: translateX(-75px); */
@@ -117,14 +117,16 @@
 /********* RESPONSIVE mobile **********/
 @media screen and (max-width: 350px) {
 	#myName {
-		font-size: 1.5rem !important;
+		font-size: 1.7rem !important;
 		width: 100vw;
 		top: -1vh;
 	}
 	#presentation {
+		transform: translateX(-50%);
 		font-size: 1.3rem !important;
-		width: 100vw;
+		width: 80vw;
 		top: 8vh;
+		text-align: center;
 	}
 	#welcome {
 		display: none;
@@ -132,6 +134,15 @@
 	.svg {
 		height: 70vh;
 		top: 16vh !important;
+	}
+	.arowUp {
+		font-size: 45px !important;
+	}
+}
+@media screen and (max-width: 350px) {
+	.svg {
+		height: 60vh;
+		top: 27vh !important;
 	}
 }
 @media screen and (min-width: 351px) and (max-width: 767px) {
@@ -146,8 +157,9 @@
 	#presentation {
 		font-size: 1.5rem !important;
 		top: 5vh !important;
-		width: 100%;
-		margin: 0 auto;
+		width: 80%;
+		transform: translateX(-50%);
+		text-align: center;
 	}
 	#presentation.active {
 		visibility: hidden;
