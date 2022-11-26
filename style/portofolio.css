@@ -47,23 +47,13 @@
 
 /*********** RESPONSIVE mobile ***************/
 
-@media screen and (max-width: 350px) {
-	.siteOne,
-	.siteTwo {
-		margin: 30px;
-		height: 25vh !important;
-	}
-	.visit {
-	}
-}
-
 @media screen and (max-width: 767px) {
 	.siteContainer {
 		top: 2vh;
 	}
 	.siteOne,
 	.siteTwo {
-		width: 60vw;
+		width: 70vw !important;
 		height: 30vh;
 		margin-bottom: 30px;
 	}

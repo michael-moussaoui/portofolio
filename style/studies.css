@@ -8,7 +8,6 @@
 		rgba(146, 92, 59, 0.192) 90%,
 		black 100%
 	);
-	/* margin-top: 5rem; */
 }
 
 .studiesP {
@@ -25,11 +24,12 @@
 	width: 35vw;
 }
 
-.logoStudi {
+.logoSimplon {
 	position: absolute;
 	left: 50%;
+	transform: translateX(-50%);
 	top: 15%;
-	width: 8vw;
+	width: 10%;
 }
 /************** RESPONSIVE mobile *******************/
 

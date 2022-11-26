@@ -25,11 +25,11 @@
 	background-color: #925c3b;
 }
 
-p.aboutP {
+.aboutP {
 	position: relative;
 	font-size: 1.5rem;
 	width: 90vw;
-	margin: 20vh auto;
+	/* margin: 20vh auto; */
 	transition: 2.5s;
 }
 
@@ -47,7 +47,7 @@ p.aboutP {
 }
 @media only screen and (max-width: 350px) {
 	#about {
-		height: 150vh;
+		height: 170vh;
 	}
 	.sectionTitle {
 		top: 2vh;
@@ -61,6 +61,8 @@ p.aboutP {
 	.myCV {
 		font-size: 1.3rem;
 		margin-bottom: 2rem !important;
+		top: -5rem;
+		position: relative;
 	}
 }
 @media only screen and (max-width: 767px) {
