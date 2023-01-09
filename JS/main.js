@@ -24,7 +24,19 @@ const myTools = document.querySelector(".myTools");
 const title4 = document.querySelector(".titleFour");
 const aboutMe = document.querySelector(".aboutMe > p");
 const title5 = document.querySelector(".titleFive");
+const about = document.getElementById("about");
+const mode = document.querySelector(".mode");
 
+// mode.addEventListener("click", () => {
+// 	body.classList.toggle("darkMode");
+// 	mouse.classList.toggle("lightMode");
+// });
+
+// about.addEventListener("click", () => {
+// 	about.classList.toggle("darkMode");
+// });
+
+console.log("test");
 window.addEventListener("mousemove", (e) => {
 	mouse.style.left = e.pageX + "px";
 	mouse.style.top = e.pageY + "px";

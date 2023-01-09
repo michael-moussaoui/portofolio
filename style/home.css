@@ -13,6 +13,9 @@
 	transition: 0.5s;
 	font-family: "Permanent Marker", cursive;
 }
+.darkMode {
+	background: #873;
+}
 
 /* .main #myName {	
 	animation: entranceleft 3.5s ease 0.3s both;

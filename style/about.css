@@ -9,6 +9,10 @@
 	);
 }
 
+.darkMode {
+	background: #f1f1f1;
+}
+
 .sectionTitle {
 	position: relative;
 	top: 10vh;
@@ -31,6 +35,7 @@
 	width: 90vw;
 	/* margin: 20vh auto; */
 	transition: 2.5s;
+	margin: 0 auto;
 }
 
 .myCV {

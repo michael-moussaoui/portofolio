@@ -13,12 +13,12 @@ body {
 	font-family: "Patrick Hand", cursive;
 	color: #c5c5c5;
 	min-height: 100vh;
-	cursor: none;
+	/* cursor: none; */
 }
-body.background {
+/* body.background {
 	transition: ease-in-out 0.3s;
 	animation: changeBackgroundColor 1.5s both;
-}
+} */
 body::-webkit-scrollbar {
 	width: 15px;
 	border-left: solid 1px #925c3b;
@@ -31,6 +31,13 @@ body::-webkit-scrollbar-thumb {
 	border-radius: 20px;
 }
 
+.darkMode {
+	background: #f2f2f2;
+}
+/* .mode {
+	z-index: 2000;
+} */
+
 #mouse {
 	position: absolute;
 	height: 45px;
@@ -40,15 +47,17 @@ body::-webkit-scrollbar-thumb {
 	background: #3f2b1f;
 	transform: translate(-50%, -50%);
 	/* transition: 0.3s ease; */
-	z-index: 1800;
-	pointer-events: none;
+	/* z-index: 1800; */
+	/* pointer-events: none; */
 	mix-blend-mode: difference;
 }
+
 #mouse.activeHover {
 	background: #925c3b2a;
 	width: 90px;
 	height: 90px;
 }
+
 h2 {
 	font-size: 4.5rem;
 }
@@ -129,6 +138,10 @@ header {
 	color: #925c3b !important;
 	font-size: 1.5rem;
 	margin: 4vw;
+}
+.nav-link:hover {
+	color: #925c3b; !important;
+	font-weight: bold;
 }
 
 .nav-link.active {
@@ -301,10 +314,11 @@ footer .fab.fa-linkedin:hover {
 .footerP {
 	position: absolute;
 	height: 1.8rem;
-	bottom: 1vh;
+	bottom: 0;
 	right: 50%;
 	transform: translateX(50%);
 	color: #925c3b;
+	
 }
 
 /****** RESPONSIVE mobile *******/
